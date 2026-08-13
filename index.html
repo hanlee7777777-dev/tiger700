@@ -4587,57 +4587,7 @@ document.addEventListener('DOMContentLoaded', function(){
     <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
     <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
   </div>
-      <button type="button" id="inqToggleBtnSub_1" onclick="inqToggleFormGeneric('_1')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 40px;">
-        <span>간편 문의 바로가기</span>
-      </button>
-      <div id="inqCollapseSub_1" style="display:none;">
-      <div class="formCard" id="inqFormCard_1" style="margin:0 0 28px;">
-        <h2 style="margin:0 0 4px;font-size:20px;color:#0b1e33;text-align:center;">간편 문의하기</h2>
-        <label>성함</label>
-        <input type="text" id="inqName_1" placeholder="성함을 입력해주세요">
-        <label>연락처</label>
-        <input type="tel" id="inqPhone_1" placeholder="연락 가능한 핸드폰 번호를 입력해주세요.">
-        <label>파손 부위</label>
-        <select id="inqPart_1">
-          <option value="">선택해주세요</option>
-          <option value="앞유리">앞유리</option>
-          <option value="옆유리">옆유리</option>
-          <option value="뒷유리">뒷유리</option>
-          <option value="선루프">선루프</option>
-          <option value="기타">기타</option>
-        </select>
-        <label>지역</label>
-        <input type="text" id="inqArea_1" placeholder="예: 강남구 논현동, 강서구 마곡동">
-        <label>추가로 남기실 말</label>
-        <textarea id="inqMsg_1" placeholder="궁금한 점을 자유롭게 남겨주세요" style="word-spacing:0px;letter-spacing:0px;text-align:left;white-space:pre-wrap;"></textarea>
-        <label style="display:flex;align-items:center;gap:9px;margin:12px 2px 0;font-size:14.5px;font-weight:700;color:#3c4656;cursor:pointer;">
-          <input type="checkbox" id="inqNoMsg_1" style="width:20px;height:20px;accent-color:#2f7d47;flex-shrink:0;" onchange="document.getElementById('inqMsg_1').value = this.checked ? (window.__inqLang==='en' ? 'Nothing else to add' : '추가로 전달할 사항 없어요') : '';">
-          추가로 전달할 사항 없어요
-        </label>
-        <button type="button" onclick="inqResetFormGeneric('_1')" style="background:#fff;color:#8a95a6;border:1.5px solid #d8e0eb;box-shadow:none;margin-top:10px;">초기화</button>
-        <div style="display:flex;gap:8px;margin-top:24px;">
-          <button type="button" onclick="inqTryOpenGeneric('_1','sms')" style="flex:1;margin-top:0;background:#0869e8;border:1.5px solid #0552b8;box-shadow:0 4px 10px rgba(8,105,232,.35);">문자로 보내기</button>
-          <button type="button" onclick="inqTryOpenGeneric('_1','kakao')" style="flex:1;margin-top:0;background:#f7d548;color:#3c2e0a;border:1.5px solid #d9b829;box-shadow:0 4px 10px rgba(247,213,72,.4);">카톡으로 보내기</button>
-        </div>
-        <button type="button" onclick="inqTryOpenGeneric('_1','share')" style="background:#3daa63;border:1.5px solid #2c8a4d;box-shadow:0 4px 10px rgba(61,170,99,.35);">공유하기</button>
-        <p style="text-align:left;color:#75808f;font-size:15.5px;font-weight:700;margin-top:22px;line-height:1.55;">문자 메세지 또는 카카오톡 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다) 손상 부분 사진도 함께 보내주세요.<br><br>시공 비용, 주의사항, 유리복원 원리와 자주 문의하시는 사항을 사이트에 정리해 두었습니다.<br><br>미리 확인해 보시면 대부분의 궁금증을 해결하실 수 있으니 충분하게 보신 후 문의 부탁드립니다.</p>
-      </div>
-      </div>
-
-      <div id="inqGuideOverlay_1" style="display:none;position:fixed;inset:0;z-index:20000;background:rgba(10,20,35,.55);align-items:center;justify-content:center;padding:20px;">
-        <div style="background:#fff;border-radius:22px;max-width:400px;width:100%;padding:26px 22px 22px;box-shadow:0 20px 50px rgba(0,0,0,.3);text-align:center;">
-          <h2 style="margin:0 0 16px;font-size:19px;color:#0b1e33;">정확한 견적을 위한 사진 촬영 가이드</h2>
-          <div style="text-align:left;background:#eaf7ee;border:1.5px solid #7bc794;border-radius:14px;padding:16px;font-size:18.5px;color:#3c4656;line-height:1.6;">
-            <p>돌빵일 경우 차 안에서 볼 때 더 잘 보이는 경우가 많습니다. <b>차 안에서 찍은 사진과 밖에서 찍은 사진</b>을 함께 보내주시면 정확한 진단에 도움이 됩니다.</p>
-            <p style="margin-top:10px;">길게 금이 간 경우는 <b>처음 돌에 맞은 부분이 잘 보이도록 촬영</b>한 사진을 보내주시면 신속한 견적과 상담이 가능합니다.</p>
-            <p style="margin-top:10px;"><b>최대한 선명하게, 촛점을 맞춰 찍어 보내주세요.</b></p>
-          </div>
-          <div style="display:flex;gap:8px;margin-top:20px;">
-            <button type="button" onclick="inqCloseGuideGeneric('_1')" style="flex:1;height:52px;border:1px solid #dfe4ea;border-radius:14px;background:#f4f6f9;color:#5a6577;font-size:15px;font-weight:800;">닫기</button>
-            <button type="button" onclick="inqConfirmSendGeneric('_1')" style="flex:1;height:52px;border:0;border-radius:14px;background:#0869e8;color:#fff;font-size:15px;font-weight:800;">확인, 문의 보내기</button>
-          </div>
-        </div>
-      </div>
+      
       <div class="free" style="margin-top:48px;">
         <div class="ic">🛡️</div>
         <div><b>시공 후 제한 없음</b><span style="line-height:1.35!important;display:block!important;margin-top:4px!important;">세차·충격 걱정 없이 시공 직후 바로 이용 가능</span></div>
@@ -4743,57 +4693,7 @@ document.addEventListener('DOMContentLoaded', function(){
     </section>
 
     
-      <button type="button" id="inqToggleBtnSub_2" onclick="inqToggleFormGeneric('_2')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 40px;">
-        <span>간편 문의 바로가기</span>
-      </button>
-      <div id="inqCollapseSub_2" style="display:none;">
-      <div class="formCard" id="inqFormCard_2" style="margin:0 0 28px;">
-        <h2 style="margin:0 0 4px;font-size:20px;color:#0b1e33;text-align:center;">간편 문의하기</h2>
-        <label>성함</label>
-        <input type="text" id="inqName_2" placeholder="성함을 입력해주세요">
-        <label>연락처</label>
-        <input type="tel" id="inqPhone_2" placeholder="연락 가능한 핸드폰 번호를 입력해주세요.">
-        <label>파손 부위</label>
-        <select id="inqPart_2">
-          <option value="">선택해주세요</option>
-          <option value="앞유리">앞유리</option>
-          <option value="옆유리">옆유리</option>
-          <option value="뒷유리">뒷유리</option>
-          <option value="선루프">선루프</option>
-          <option value="기타">기타</option>
-        </select>
-        <label>지역</label>
-        <input type="text" id="inqArea_2" placeholder="예: 강남구 논현동, 강서구 마곡동">
-        <label>추가로 남기실 말</label>
-        <textarea id="inqMsg_2" placeholder="궁금한 점을 자유롭게 남겨주세요" style="word-spacing:0px;letter-spacing:0px;text-align:left;white-space:pre-wrap;"></textarea>
-        <label style="display:flex;align-items:center;gap:9px;margin:12px 2px 0;font-size:14.5px;font-weight:700;color:#3c4656;cursor:pointer;">
-          <input type="checkbox" id="inqNoMsg_2" style="width:20px;height:20px;accent-color:#2f7d47;flex-shrink:0;" onchange="document.getElementById('inqMsg_2').value = this.checked ? (window.__inqLang==='en' ? 'Nothing else to add' : '추가로 전달할 사항 없어요') : '';">
-          추가로 전달할 사항 없어요
-        </label>
-        <button type="button" onclick="inqResetFormGeneric('_2')" style="background:#fff;color:#8a95a6;border:1.5px solid #d8e0eb;box-shadow:none;margin-top:10px;">초기화</button>
-        <div style="display:flex;gap:8px;margin-top:24px;">
-          <button type="button" onclick="inqTryOpenGeneric('_2','sms')" style="flex:1;margin-top:0;background:#0869e8;border:1.5px solid #0552b8;box-shadow:0 4px 10px rgba(8,105,232,.35);">문자로 보내기</button>
-          <button type="button" onclick="inqTryOpenGeneric('_2','kakao')" style="flex:1;margin-top:0;background:#f7d548;color:#3c2e0a;border:1.5px solid #d9b829;box-shadow:0 4px 10px rgba(247,213,72,.4);">카톡으로 보내기</button>
-        </div>
-        <button type="button" onclick="inqTryOpenGeneric('_2','share')" style="background:#3daa63;border:1.5px solid #2c8a4d;box-shadow:0 4px 10px rgba(61,170,99,.35);">공유하기</button>
-        <p style="text-align:left;color:#75808f;font-size:15.5px;font-weight:700;margin-top:22px;line-height:1.55;">문자 메세지 또는 카카오톡 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다) 손상 부분 사진도 함께 보내주세요.<br><br>시공 비용, 주의사항, 유리복원 원리와 자주 문의하시는 사항을 사이트에 정리해 두었습니다.<br><br>미리 확인해 보시면 대부분의 궁금증을 해결하실 수 있으니 충분하게 보신 후 문의 부탁드립니다.</p>
-      </div>
-      </div>
-
-      <div id="inqGuideOverlay_2" style="display:none;position:fixed;inset:0;z-index:20000;background:rgba(10,20,35,.55);align-items:center;justify-content:center;padding:20px;">
-        <div style="background:#fff;border-radius:22px;max-width:400px;width:100%;padding:26px 22px 22px;box-shadow:0 20px 50px rgba(0,0,0,.3);text-align:center;">
-          <h2 style="margin:0 0 16px;font-size:19px;color:#0b1e33;">정확한 견적을 위한 사진 촬영 가이드</h2>
-          <div style="text-align:left;background:#eaf7ee;border:1.5px solid #7bc794;border-radius:14px;padding:16px;font-size:18.5px;color:#3c4656;line-height:1.6;">
-            <p>돌빵일 경우 차 안에서 볼 때 더 잘 보이는 경우가 많습니다. <b>차 안에서 찍은 사진과 밖에서 찍은 사진</b>을 함께 보내주시면 정확한 진단에 도움이 됩니다.</p>
-            <p style="margin-top:10px;">길게 금이 간 경우는 <b>처음 돌에 맞은 부분이 잘 보이도록 촬영</b>한 사진을 보내주시면 신속한 견적과 상담이 가능합니다.</p>
-            <p style="margin-top:10px;"><b>최대한 선명하게, 촛점을 맞춰 찍어 보내주세요.</b></p>
-          </div>
-          <div style="display:flex;gap:8px;margin-top:20px;">
-            <button type="button" onclick="inqCloseGuideGeneric('_2')" style="flex:1;height:52px;border:1px solid #dfe4ea;border-radius:14px;background:#f4f6f9;color:#5a6577;font-size:15px;font-weight:800;">닫기</button>
-            <button type="button" onclick="inqConfirmSendGeneric('_2')" style="flex:1;height:52px;border:0;border-radius:14px;background:#0869e8;color:#fff;font-size:15px;font-weight:800;">확인, 문의 보내기</button>
-          </div>
-        </div>
-      </div>
+      
       <div class="free" style="margin-top:32px;">
       <div class="ic">⏱️</div>
       <div><b>20분 완료</b><span style="line-height:1.35!important;display:block!important;margin-top:4px!important;">출장 방문부터 복원까지 신속하게 진행됩니다</span></div>
@@ -4913,57 +4813,7 @@ document.addEventListener('DOMContentLoaded', function(){
     </section>
 
     
-      <button type="button" id="inqToggleBtnSub_3" onclick="inqToggleFormGeneric('_3')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 40px;">
-        <span>간편 문의 바로가기</span>
-      </button>
-      <div id="inqCollapseSub_3" style="display:none;">
-      <div class="formCard" id="inqFormCard_3" style="margin:0 0 28px;">
-        <h2 style="margin:0 0 4px;font-size:20px;color:#0b1e33;text-align:center;">간편 문의하기</h2>
-        <label>성함</label>
-        <input type="text" id="inqName_3" placeholder="성함을 입력해주세요">
-        <label>연락처</label>
-        <input type="tel" id="inqPhone_3" placeholder="연락 가능한 핸드폰 번호를 입력해주세요.">
-        <label>파손 부위</label>
-        <select id="inqPart_3">
-          <option value="">선택해주세요</option>
-          <option value="앞유리">앞유리</option>
-          <option value="옆유리">옆유리</option>
-          <option value="뒷유리">뒷유리</option>
-          <option value="선루프">선루프</option>
-          <option value="기타">기타</option>
-        </select>
-        <label>지역</label>
-        <input type="text" id="inqArea_3" placeholder="예: 강남구 논현동, 강서구 마곡동">
-        <label>추가로 남기실 말</label>
-        <textarea id="inqMsg_3" placeholder="궁금한 점을 자유롭게 남겨주세요" style="word-spacing:0px;letter-spacing:0px;text-align:left;white-space:pre-wrap;"></textarea>
-        <label style="display:flex;align-items:center;gap:9px;margin:12px 2px 0;font-size:14.5px;font-weight:700;color:#3c4656;cursor:pointer;">
-          <input type="checkbox" id="inqNoMsg_3" style="width:20px;height:20px;accent-color:#2f7d47;flex-shrink:0;" onchange="document.getElementById('inqMsg_3').value = this.checked ? (window.__inqLang==='en' ? 'Nothing else to add' : '추가로 전달할 사항 없어요') : '';">
-          추가로 전달할 사항 없어요
-        </label>
-        <button type="button" onclick="inqResetFormGeneric('_3')" style="background:#fff;color:#8a95a6;border:1.5px solid #d8e0eb;box-shadow:none;margin-top:10px;">초기화</button>
-        <div style="display:flex;gap:8px;margin-top:24px;">
-          <button type="button" onclick="inqTryOpenGeneric('_3','sms')" style="flex:1;margin-top:0;background:#0869e8;border:1.5px solid #0552b8;box-shadow:0 4px 10px rgba(8,105,232,.35);">문자로 보내기</button>
-          <button type="button" onclick="inqTryOpenGeneric('_3','kakao')" style="flex:1;margin-top:0;background:#f7d548;color:#3c2e0a;border:1.5px solid #d9b829;box-shadow:0 4px 10px rgba(247,213,72,.4);">카톡으로 보내기</button>
-        </div>
-        <button type="button" onclick="inqTryOpenGeneric('_3','share')" style="background:#3daa63;border:1.5px solid #2c8a4d;box-shadow:0 4px 10px rgba(61,170,99,.35);">공유하기</button>
-        <p style="text-align:left;color:#75808f;font-size:15.5px;font-weight:700;margin-top:22px;line-height:1.55;">문자 메세지 또는 카카오톡 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다) 손상 부분 사진도 함께 보내주세요.<br><br>시공 비용, 주의사항, 유리복원 원리와 자주 문의하시는 사항을 사이트에 정리해 두었습니다.<br><br>미리 확인해 보시면 대부분의 궁금증을 해결하실 수 있으니 충분하게 보신 후 문의 부탁드립니다.</p>
-      </div>
-      </div>
-
-      <div id="inqGuideOverlay_3" style="display:none;position:fixed;inset:0;z-index:20000;background:rgba(10,20,35,.55);align-items:center;justify-content:center;padding:20px;">
-        <div style="background:#fff;border-radius:22px;max-width:400px;width:100%;padding:26px 22px 22px;box-shadow:0 20px 50px rgba(0,0,0,.3);text-align:center;">
-          <h2 style="margin:0 0 16px;font-size:19px;color:#0b1e33;">정확한 견적을 위한 사진 촬영 가이드</h2>
-          <div style="text-align:left;background:#eaf7ee;border:1.5px solid #7bc794;border-radius:14px;padding:16px;font-size:18.5px;color:#3c4656;line-height:1.6;">
-            <p>돌빵일 경우 차 안에서 볼 때 더 잘 보이는 경우가 많습니다. <b>차 안에서 찍은 사진과 밖에서 찍은 사진</b>을 함께 보내주시면 정확한 진단에 도움이 됩니다.</p>
-            <p style="margin-top:10px;">길게 금이 간 경우는 <b>처음 돌에 맞은 부분이 잘 보이도록 촬영</b>한 사진을 보내주시면 신속한 견적과 상담이 가능합니다.</p>
-            <p style="margin-top:10px;"><b>최대한 선명하게, 촛점을 맞춰 찍어 보내주세요.</b></p>
-          </div>
-          <div style="display:flex;gap:8px;margin-top:20px;">
-            <button type="button" onclick="inqCloseGuideGeneric('_3')" style="flex:1;height:52px;border:1px solid #dfe4ea;border-radius:14px;background:#f4f6f9;color:#5a6577;font-size:15px;font-weight:800;">닫기</button>
-            <button type="button" onclick="inqConfirmSendGeneric('_3')" style="flex:1;height:52px;border:0;border-radius:14px;background:#0869e8;color:#fff;font-size:15px;font-weight:800;">확인, 문의 보내기</button>
-          </div>
-        </div>
-      </div>
+      
       <div class="free" style="margin-top:32px;">
       <div class="ic">💰</div>
       <div><b>교체보다 합리적</b><span style="line-height:1.35!important;display:block!important;margin-top:4px!important;">유리 교체 견적 대비 부담 없는 비용으로 복원</span></div>
@@ -5083,57 +4933,7 @@ document.addEventListener('DOMContentLoaded', function(){
     </section>
 
     
-      <button type="button" id="inqToggleBtnSub_4" onclick="inqToggleFormGeneric('_4')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 40px;">
-        <span>간편 문의 바로가기</span>
-      </button>
-      <div id="inqCollapseSub_4" style="display:none;">
-      <div class="formCard" id="inqFormCard_4" style="margin:0 0 28px;">
-        <h2 style="margin:0 0 4px;font-size:20px;color:#0b1e33;text-align:center;">간편 문의하기</h2>
-        <label>성함</label>
-        <input type="text" id="inqName_4" placeholder="성함을 입력해주세요">
-        <label>연락처</label>
-        <input type="tel" id="inqPhone_4" placeholder="연락 가능한 핸드폰 번호를 입력해주세요.">
-        <label>파손 부위</label>
-        <select id="inqPart_4">
-          <option value="">선택해주세요</option>
-          <option value="앞유리">앞유리</option>
-          <option value="옆유리">옆유리</option>
-          <option value="뒷유리">뒷유리</option>
-          <option value="선루프">선루프</option>
-          <option value="기타">기타</option>
-        </select>
-        <label>지역</label>
-        <input type="text" id="inqArea_4" placeholder="예: 강남구 논현동, 강서구 마곡동">
-        <label>추가로 남기실 말</label>
-        <textarea id="inqMsg_4" placeholder="궁금한 점을 자유롭게 남겨주세요" style="word-spacing:0px;letter-spacing:0px;text-align:left;white-space:pre-wrap;"></textarea>
-        <label style="display:flex;align-items:center;gap:9px;margin:12px 2px 0;font-size:14.5px;font-weight:700;color:#3c4656;cursor:pointer;">
-          <input type="checkbox" id="inqNoMsg_4" style="width:20px;height:20px;accent-color:#2f7d47;flex-shrink:0;" onchange="document.getElementById('inqMsg_4').value = this.checked ? (window.__inqLang==='en' ? 'Nothing else to add' : '추가로 전달할 사항 없어요') : '';">
-          추가로 전달할 사항 없어요
-        </label>
-        <button type="button" onclick="inqResetFormGeneric('_4')" style="background:#fff;color:#8a95a6;border:1.5px solid #d8e0eb;box-shadow:none;margin-top:10px;">초기화</button>
-        <div style="display:flex;gap:8px;margin-top:24px;">
-          <button type="button" onclick="inqTryOpenGeneric('_4','sms')" style="flex:1;margin-top:0;background:#0869e8;border:1.5px solid #0552b8;box-shadow:0 4px 10px rgba(8,105,232,.35);">문자로 보내기</button>
-          <button type="button" onclick="inqTryOpenGeneric('_4','kakao')" style="flex:1;margin-top:0;background:#f7d548;color:#3c2e0a;border:1.5px solid #d9b829;box-shadow:0 4px 10px rgba(247,213,72,.4);">카톡으로 보내기</button>
-        </div>
-        <button type="button" onclick="inqTryOpenGeneric('_4','share')" style="background:#3daa63;border:1.5px solid #2c8a4d;box-shadow:0 4px 10px rgba(61,170,99,.35);">공유하기</button>
-        <p style="text-align:left;color:#75808f;font-size:15.5px;font-weight:700;margin-top:22px;line-height:1.55;">문자 메세지 또는 카카오톡 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다) 손상 부분 사진도 함께 보내주세요.<br><br>시공 비용, 주의사항, 유리복원 원리와 자주 문의하시는 사항을 사이트에 정리해 두었습니다.<br><br>미리 확인해 보시면 대부분의 궁금증을 해결하실 수 있으니 충분하게 보신 후 문의 부탁드립니다.</p>
-      </div>
-      </div>
-
-      <div id="inqGuideOverlay_4" style="display:none;position:fixed;inset:0;z-index:20000;background:rgba(10,20,35,.55);align-items:center;justify-content:center;padding:20px;">
-        <div style="background:#fff;border-radius:22px;max-width:400px;width:100%;padding:26px 22px 22px;box-shadow:0 20px 50px rgba(0,0,0,.3);text-align:center;">
-          <h2 style="margin:0 0 16px;font-size:19px;color:#0b1e33;">정확한 견적을 위한 사진 촬영 가이드</h2>
-          <div style="text-align:left;background:#eaf7ee;border:1.5px solid #7bc794;border-radius:14px;padding:16px;font-size:18.5px;color:#3c4656;line-height:1.6;">
-            <p>돌빵일 경우 차 안에서 볼 때 더 잘 보이는 경우가 많습니다. <b>차 안에서 찍은 사진과 밖에서 찍은 사진</b>을 함께 보내주시면 정확한 진단에 도움이 됩니다.</p>
-            <p style="margin-top:10px;">길게 금이 간 경우는 <b>처음 돌에 맞은 부분이 잘 보이도록 촬영</b>한 사진을 보내주시면 신속한 견적과 상담이 가능합니다.</p>
-            <p style="margin-top:10px;"><b>최대한 선명하게, 촛점을 맞춰 찍어 보내주세요.</b></p>
-          </div>
-          <div style="display:flex;gap:8px;margin-top:20px;">
-            <button type="button" onclick="inqCloseGuideGeneric('_4')" style="flex:1;height:52px;border:1px solid #dfe4ea;border-radius:14px;background:#f4f6f9;color:#5a6577;font-size:15px;font-weight:800;">닫기</button>
-            <button type="button" onclick="inqConfirmSendGeneric('_4')" style="flex:1;height:52px;border:0;border-radius:14px;background:#0869e8;color:#fff;font-size:15px;font-weight:800;">확인, 문의 보내기</button>
-          </div>
-        </div>
-      </div>
+      
       <div class="free" style="margin-top:32px;">
       <div class="ic">📏</div>
       <div><b>롱크랙 전문 복원</b><span style="line-height:1.35!important;display:block!important;margin-top:4px!important;">30cm 이상 긴 크랙까지 복원하는 전문 기술력</span></div>
@@ -5253,57 +5053,7 @@ document.addEventListener('DOMContentLoaded', function(){
     </section>
 
     
-      <button type="button" id="inqToggleBtnSub_5" onclick="inqToggleFormGeneric('_5')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 40px;">
-        <span>간편 문의 바로가기</span>
-      </button>
-      <div id="inqCollapseSub_5" style="display:none;">
-      <div class="formCard" id="inqFormCard_5" style="margin:0 0 28px;">
-        <h2 style="margin:0 0 4px;font-size:20px;color:#0b1e33;text-align:center;">간편 문의하기</h2>
-        <label>성함</label>
-        <input type="text" id="inqName_5" placeholder="성함을 입력해주세요">
-        <label>연락처</label>
-        <input type="tel" id="inqPhone_5" placeholder="연락 가능한 핸드폰 번호를 입력해주세요.">
-        <label>파손 부위</label>
-        <select id="inqPart_5">
-          <option value="">선택해주세요</option>
-          <option value="앞유리">앞유리</option>
-          <option value="옆유리">옆유리</option>
-          <option value="뒷유리">뒷유리</option>
-          <option value="선루프">선루프</option>
-          <option value="기타">기타</option>
-        </select>
-        <label>지역</label>
-        <input type="text" id="inqArea_5" placeholder="예: 강남구 논현동, 강서구 마곡동">
-        <label>추가로 남기실 말</label>
-        <textarea id="inqMsg_5" placeholder="궁금한 점을 자유롭게 남겨주세요" style="word-spacing:0px;letter-spacing:0px;text-align:left;white-space:pre-wrap;"></textarea>
-        <label style="display:flex;align-items:center;gap:9px;margin:12px 2px 0;font-size:14.5px;font-weight:700;color:#3c4656;cursor:pointer;">
-          <input type="checkbox" id="inqNoMsg_5" style="width:20px;height:20px;accent-color:#2f7d47;flex-shrink:0;" onchange="document.getElementById('inqMsg_5').value = this.checked ? (window.__inqLang==='en' ? 'Nothing else to add' : '추가로 전달할 사항 없어요') : '';">
-          추가로 전달할 사항 없어요
-        </label>
-        <button type="button" onclick="inqResetFormGeneric('_5')" style="background:#fff;color:#8a95a6;border:1.5px solid #d8e0eb;box-shadow:none;margin-top:10px;">초기화</button>
-        <div style="display:flex;gap:8px;margin-top:24px;">
-          <button type="button" onclick="inqTryOpenGeneric('_5','sms')" style="flex:1;margin-top:0;background:#0869e8;border:1.5px solid #0552b8;box-shadow:0 4px 10px rgba(8,105,232,.35);">문자로 보내기</button>
-          <button type="button" onclick="inqTryOpenGeneric('_5','kakao')" style="flex:1;margin-top:0;background:#f7d548;color:#3c2e0a;border:1.5px solid #d9b829;box-shadow:0 4px 10px rgba(247,213,72,.4);">카톡으로 보내기</button>
-        </div>
-        <button type="button" onclick="inqTryOpenGeneric('_5','share')" style="background:#3daa63;border:1.5px solid #2c8a4d;box-shadow:0 4px 10px rgba(61,170,99,.35);">공유하기</button>
-        <p style="text-align:left;color:#75808f;font-size:15.5px;font-weight:700;margin-top:22px;line-height:1.55;">문자 메세지 또는 카카오톡 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다) 손상 부분 사진도 함께 보내주세요.<br><br>시공 비용, 주의사항, 유리복원 원리와 자주 문의하시는 사항을 사이트에 정리해 두었습니다.<br><br>미리 확인해 보시면 대부분의 궁금증을 해결하실 수 있으니 충분하게 보신 후 문의 부탁드립니다.</p>
-      </div>
-      </div>
-
-      <div id="inqGuideOverlay_5" style="display:none;position:fixed;inset:0;z-index:20000;background:rgba(10,20,35,.55);align-items:center;justify-content:center;padding:20px;">
-        <div style="background:#fff;border-radius:22px;max-width:400px;width:100%;padding:26px 22px 22px;box-shadow:0 20px 50px rgba(0,0,0,.3);text-align:center;">
-          <h2 style="margin:0 0 16px;font-size:19px;color:#0b1e33;">정확한 견적을 위한 사진 촬영 가이드</h2>
-          <div style="text-align:left;background:#eaf7ee;border:1.5px solid #7bc794;border-radius:14px;padding:16px;font-size:18.5px;color:#3c4656;line-height:1.6;">
-            <p>돌빵일 경우 차 안에서 볼 때 더 잘 보이는 경우가 많습니다. <b>차 안에서 찍은 사진과 밖에서 찍은 사진</b>을 함께 보내주시면 정확한 진단에 도움이 됩니다.</p>
-            <p style="margin-top:10px;">길게 금이 간 경우는 <b>처음 돌에 맞은 부분이 잘 보이도록 촬영</b>한 사진을 보내주시면 신속한 견적과 상담이 가능합니다.</p>
-            <p style="margin-top:10px;"><b>최대한 선명하게, 촛점을 맞춰 찍어 보내주세요.</b></p>
-          </div>
-          <div style="display:flex;gap:8px;margin-top:20px;">
-            <button type="button" onclick="inqCloseGuideGeneric('_5')" style="flex:1;height:52px;border:1px solid #dfe4ea;border-radius:14px;background:#f4f6f9;color:#5a6577;font-size:15px;font-weight:800;">닫기</button>
-            <button type="button" onclick="inqConfirmSendGeneric('_5')" style="flex:1;height:52px;border:0;border-radius:14px;background:#0869e8;color:#fff;font-size:15px;font-weight:800;">확인, 문의 보내기</button>
-          </div>
-        </div>
-      </div>
+      
       <div class="free" style="margin-top:32px;">
       <div class="ic">🔍</div>
       <div><b>조기 발견 시 최선의 복원</b><span style="line-height:1.35!important;display:block!important;margin-top:4px!important;">크랙이 번지기 전 빠른 대응으로 손상 최소화</span></div>
@@ -5410,57 +5160,7 @@ document.addEventListener('DOMContentLoaded', function(){
     </section>
 
     
-      <button type="button" id="inqToggleBtnSub_6" onclick="inqToggleFormGeneric('_6')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 40px;">
-        <span>간편 문의 바로가기</span>
-      </button>
-      <div id="inqCollapseSub_6" style="display:none;">
-      <div class="formCard" id="inqFormCard_6" style="margin:0 0 28px;">
-        <h2 style="margin:0 0 4px;font-size:20px;color:#0b1e33;text-align:center;">간편 문의하기</h2>
-        <label>성함</label>
-        <input type="text" id="inqName_6" placeholder="성함을 입력해주세요">
-        <label>연락처</label>
-        <input type="tel" id="inqPhone_6" placeholder="연락 가능한 핸드폰 번호를 입력해주세요.">
-        <label>파손 부위</label>
-        <select id="inqPart_6">
-          <option value="">선택해주세요</option>
-          <option value="앞유리">앞유리</option>
-          <option value="옆유리">옆유리</option>
-          <option value="뒷유리">뒷유리</option>
-          <option value="선루프">선루프</option>
-          <option value="기타">기타</option>
-        </select>
-        <label>지역</label>
-        <input type="text" id="inqArea_6" placeholder="예: 강남구 논현동, 강서구 마곡동">
-        <label>추가로 남기실 말</label>
-        <textarea id="inqMsg_6" placeholder="궁금한 점을 자유롭게 남겨주세요" style="word-spacing:0px;letter-spacing:0px;text-align:left;white-space:pre-wrap;"></textarea>
-        <label style="display:flex;align-items:center;gap:9px;margin:12px 2px 0;font-size:14.5px;font-weight:700;color:#3c4656;cursor:pointer;">
-          <input type="checkbox" id="inqNoMsg_6" style="width:20px;height:20px;accent-color:#2f7d47;flex-shrink:0;" onchange="document.getElementById('inqMsg_6').value = this.checked ? (window.__inqLang==='en' ? 'Nothing else to add' : '추가로 전달할 사항 없어요') : '';">
-          추가로 전달할 사항 없어요
-        </label>
-        <button type="button" onclick="inqResetFormGeneric('_6')" style="background:#fff;color:#8a95a6;border:1.5px solid #d8e0eb;box-shadow:none;margin-top:10px;">초기화</button>
-        <div style="display:flex;gap:8px;margin-top:24px;">
-          <button type="button" onclick="inqTryOpenGeneric('_6','sms')" style="flex:1;margin-top:0;background:#0869e8;border:1.5px solid #0552b8;box-shadow:0 4px 10px rgba(8,105,232,.35);">문자로 보내기</button>
-          <button type="button" onclick="inqTryOpenGeneric('_6','kakao')" style="flex:1;margin-top:0;background:#f7d548;color:#3c2e0a;border:1.5px solid #d9b829;box-shadow:0 4px 10px rgba(247,213,72,.4);">카톡으로 보내기</button>
-        </div>
-        <button type="button" onclick="inqTryOpenGeneric('_6','share')" style="background:#3daa63;border:1.5px solid #2c8a4d;box-shadow:0 4px 10px rgba(61,170,99,.35);">공유하기</button>
-        <p style="text-align:left;color:#75808f;font-size:15.5px;font-weight:700;margin-top:22px;line-height:1.55;">문자 메세지 또는 카카오톡 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다) 손상 부분 사진도 함께 보내주세요.<br><br>시공 비용, 주의사항, 유리복원 원리와 자주 문의하시는 사항을 사이트에 정리해 두었습니다.<br><br>미리 확인해 보시면 대부분의 궁금증을 해결하실 수 있으니 충분하게 보신 후 문의 부탁드립니다.</p>
-      </div>
-      </div>
-
-      <div id="inqGuideOverlay_6" style="display:none;position:fixed;inset:0;z-index:20000;background:rgba(10,20,35,.55);align-items:center;justify-content:center;padding:20px;">
-        <div style="background:#fff;border-radius:22px;max-width:400px;width:100%;padding:26px 22px 22px;box-shadow:0 20px 50px rgba(0,0,0,.3);text-align:center;">
-          <h2 style="margin:0 0 16px;font-size:19px;color:#0b1e33;">정확한 견적을 위한 사진 촬영 가이드</h2>
-          <div style="text-align:left;background:#eaf7ee;border:1.5px solid #7bc794;border-radius:14px;padding:16px;font-size:18.5px;color:#3c4656;line-height:1.6;">
-            <p>돌빵일 경우 차 안에서 볼 때 더 잘 보이는 경우가 많습니다. <b>차 안에서 찍은 사진과 밖에서 찍은 사진</b>을 함께 보내주시면 정확한 진단에 도움이 됩니다.</p>
-            <p style="margin-top:10px;">길게 금이 간 경우는 <b>처음 돌에 맞은 부분이 잘 보이도록 촬영</b>한 사진을 보내주시면 신속한 견적과 상담이 가능합니다.</p>
-            <p style="margin-top:10px;"><b>최대한 선명하게, 촛점을 맞춰 찍어 보내주세요.</b></p>
-          </div>
-          <div style="display:flex;gap:8px;margin-top:20px;">
-            <button type="button" onclick="inqCloseGuideGeneric('_6')" style="flex:1;height:52px;border:1px solid #dfe4ea;border-radius:14px;background:#f4f6f9;color:#5a6577;font-size:15px;font-weight:800;">닫기</button>
-            <button type="button" onclick="inqConfirmSendGeneric('_6')" style="flex:1;height:52px;border:0;border-radius:14px;background:#0869e8;color:#fff;font-size:15px;font-weight:800;">확인, 문의 보내기</button>
-          </div>
-        </div>
-      </div>
+      
       <div class="free" style="margin-top:32px;">
       <div class="ic">🪟</div>
       <div><b>특수 유리도 복원</b><span style="line-height:1.35!important;display:block!important;margin-top:4px!important;">쇼케이스·건물 유리 등 두꺼운 특수 유리까지 복원</span></div>
@@ -6643,57 +6343,7 @@ document.addEventListener('DOMContentLoaded', function(){
     </section>
 
     
-      <button type="button" id="inqToggleBtnSub_16" onclick="inqToggleFormGeneric('_16')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 40px;">
-        <span>간편 문의 바로가기</span>
-      </button>
-      <div id="inqCollapseSub_16" style="display:none;">
-      <div class="formCard" id="inqFormCard_16" style="margin:0 0 28px;">
-        <h2 style="margin:0 0 4px;font-size:20px;color:#0b1e33;text-align:center;">간편 문의하기</h2>
-        <label>성함</label>
-        <input type="text" id="inqName_16" placeholder="성함을 입력해주세요">
-        <label>연락처</label>
-        <input type="tel" id="inqPhone_16" placeholder="연락 가능한 핸드폰 번호를 입력해주세요.">
-        <label>파손 부위</label>
-        <select id="inqPart_16">
-          <option value="">선택해주세요</option>
-          <option value="앞유리">앞유리</option>
-          <option value="옆유리">옆유리</option>
-          <option value="뒷유리">뒷유리</option>
-          <option value="선루프">선루프</option>
-          <option value="기타">기타</option>
-        </select>
-        <label>지역</label>
-        <input type="text" id="inqArea_16" placeholder="예: 강남구 논현동, 강서구 마곡동">
-        <label>추가로 남기실 말</label>
-        <textarea id="inqMsg_16" placeholder="궁금한 점을 자유롭게 남겨주세요" style="word-spacing:0px;letter-spacing:0px;text-align:left;white-space:pre-wrap;"></textarea>
-        <label style="display:flex;align-items:center;gap:9px;margin:12px 2px 0;font-size:14.5px;font-weight:700;color:#3c4656;cursor:pointer;">
-          <input type="checkbox" id="inqNoMsg_16" style="width:20px;height:20px;accent-color:#2f7d47;flex-shrink:0;" onchange="document.getElementById('inqMsg_16').value = this.checked ? (window.__inqLang==='en' ? 'Nothing else to add' : '추가로 전달할 사항 없어요') : '';">
-          추가로 전달할 사항 없어요
-        </label>
-        <button type="button" onclick="inqResetFormGeneric('_16')" style="background:#fff;color:#8a95a6;border:1.5px solid #d8e0eb;box-shadow:none;margin-top:10px;">초기화</button>
-        <div style="display:flex;gap:8px;margin-top:24px;">
-          <button type="button" onclick="inqTryOpenGeneric('_16','sms')" style="flex:1;margin-top:0;background:#0869e8;border:1.5px solid #0552b8;box-shadow:0 4px 10px rgba(8,105,232,.35);">문자로 보내기</button>
-          <button type="button" onclick="inqTryOpenGeneric('_16','kakao')" style="flex:1;margin-top:0;background:#f7d548;color:#3c2e0a;border:1.5px solid #d9b829;box-shadow:0 4px 10px rgba(247,213,72,.4);">카톡으로 보내기</button>
-        </div>
-        <button type="button" onclick="inqTryOpenGeneric('_16','share')" style="background:#3daa63;border:1.5px solid #2c8a4d;box-shadow:0 4px 10px rgba(61,170,99,.35);">공유하기</button>
-        <p style="text-align:left;color:#75808f;font-size:15.5px;font-weight:700;margin-top:22px;line-height:1.55;">문자 메세지 또는 카카오톡 채팅창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다) 손상 부분 사진도 함께 보내주세요.<br><br>시공 비용, 주의사항, 유리복원 원리와 자주 문의하시는 사항을 사이트에 정리해 두었습니다.<br><br>미리 확인해 보시면 대부분의 궁금증을 해결하실 수 있으니 충분하게 보신 후 문의 부탁드립니다.</p>
-      </div>
-      </div>
-
-      <div id="inqGuideOverlay_16" style="display:none;position:fixed;inset:0;z-index:20000;background:rgba(10,20,35,.55);align-items:center;justify-content:center;padding:20px;">
-        <div style="background:#fff;border-radius:22px;max-width:400px;width:100%;padding:26px 22px 22px;box-shadow:0 20px 50px rgba(0,0,0,.3);text-align:center;">
-          <h2 style="margin:0 0 16px;font-size:19px;color:#0b1e33;">정확한 견적을 위한 사진 촬영 가이드</h2>
-          <div style="text-align:left;background:#eaf7ee;border:1.5px solid #7bc794;border-radius:14px;padding:16px;font-size:18.5px;color:#3c4656;line-height:1.6;">
-            <p>돌빵일 경우 차 안에서 볼 때 더 잘 보이는 경우가 많습니다. <b>차 안에서 찍은 사진과 밖에서 찍은 사진</b>을 함께 보내주시면 정확한 진단에 도움이 됩니다.</p>
-            <p style="margin-top:10px;">길게 금이 간 경우는 <b>처음 돌에 맞은 부분이 잘 보이도록 촬영</b>한 사진을 보내주시면 신속한 견적과 상담이 가능합니다.</p>
-            <p style="margin-top:10px;"><b>최대한 선명하게, 촛점을 맞춰 찍어 보내주세요.</b></p>
-          </div>
-          <div style="display:flex;gap:8px;margin-top:20px;">
-            <button type="button" onclick="inqCloseGuideGeneric('_16')" style="flex:1;height:52px;border:1px solid #dfe4ea;border-radius:14px;background:#f4f6f9;color:#5a6577;font-size:15px;font-weight:800;">닫기</button>
-            <button type="button" onclick="inqConfirmSendGeneric('_16')" style="flex:1;height:52px;border:0;border-radius:14px;background:#0869e8;color:#fff;font-size:15px;font-weight:800;">확인, 문의 보내기</button>
-          </div>
-        </div>
-      </div>
+      
       <div class="free" style="margin-top:32px;">
       <div class="ic">🎓</div>
       <div><b>실전으로 탄탄하게</b><span style="line-height:1.35!important;display:block!important;margin-top:4px!important;">기술팀이 함께하며, 탄탄한 기술력을 다집니다.</span></div>
@@ -7526,12 +7176,6 @@ html[lang="en"] .premiumCard p{font-size:12px!important;}
     inqAreaMain: {ko:"예: 강남구 논현동, 강서구 마곡동", en:"e.g. Nonhyeon-dong, Gangnam-gu"},
     inqMsgMain: {ko:"궁금한 점을 자유롭게 남겨주세요", en:"Feel free to leave any questions"}
   };
-  ['_1','_2','_3','_4','_5','_6','_7','_8','_9','_10','_11','_13','_14','_16'].forEach(function(suf){
-    __inqPH['inqName'+suf] = {ko:"성함을 입력해주세요", en:"Enter your name"};
-    __inqPH['inqPhone'+suf] = {ko:"연락 가능한 핸드폰 번호를 입력해주세요.", en:"Enter a phone number we can reach you at."};
-    __inqPH['inqArea'+suf] = {ko:"예: 강남구 논현동, 강서구 마곡동", en:"e.g. Nonhyeon-dong, Gangnam-gu"};
-    __inqPH['inqMsg'+suf] = {ko:"궁금한 점을 자유롭게 남겨주세요", en:"Feel free to leave any questions"};
-  });
   var __inqBaseApplyLang = window.__applyLang;
   window.__applyLang = function(lang){
     __inqBaseApplyLang(lang);
@@ -7639,81 +7283,6 @@ function inqResetForm(){
   });
   alert(isEn ? 'The form has been cleared.' : '입력하신 내용이 모두 초기화되었습니다.');
 }
-var __inqGenericSuffixes = ['_1','_2','_3','_4','_5','_6','_7','_8','_9','_10','_11','_13','_14','_16'];
-var inqPendingActionMap = {};
-function inqBuildTextGeneric(suffix){
-  var g=function(id){var el=document.getElementById(id+suffix);return el?el.value.trim():'';};
-  var name=g('inqName'), phone=g('inqPhone'), part=g('inqPart'), area=g('inqArea'), msg=g('inqMsg');
-  var isEn = window.__inqLang === 'en';
-  var lines=[isEn ? '[Carglass Inquiry]' : '[카글라스 문의]'];
-  if(name) lines.push((isEn ? 'Name: ' : '성함: ')+name);
-  if(phone) lines.push((isEn ? 'Phone: ' : '연락처: ')+phone);
-  if(part) lines.push((isEn ? 'Damage: ' : '파손부위: ')+part);
-  if(area) lines.push((isEn ? 'Area: ' : '지역: ')+area);
-  if(msg) lines.push((isEn ? 'Message: ' : '문의내용: ')+msg);
-  return lines.join('\n');
-}
-function inqTryOpenGeneric(suffix, action){
-  var g=function(id){var el=document.getElementById(id+suffix);return el?el.value.trim():'';};
-  var name=g('inqName'), phone=g('inqPhone'), part=g('inqPart'), area=g('inqArea'), msg=g('inqMsg');
-  if(!name || !phone || !part || !area || !msg){
-    alert(window.__inqLang === 'en' ? 'Please fill in all fields.' : '모든 항목을 입력해주세요.');
-    return;
-  }
-  inqPendingActionMap[suffix] = action;
-  var overlay = document.getElementById('inqGuideOverlay'+suffix);
-  if(overlay) overlay.style.display='flex';
-}
-function inqCloseGuideGeneric(suffix){
-  var overlay = document.getElementById('inqGuideOverlay'+suffix);
-  if(overlay) overlay.style.display='none';
-  delete inqPendingActionMap[suffix];
-}
-function inqConfirmSendGeneric(suffix){
-  var action = inqPendingActionMap[suffix];
-  var overlay = document.getElementById('inqGuideOverlay'+suffix);
-  if(overlay) overlay.style.display='none';
-  var t = inqBuildTextGeneric(suffix);
-  if(action==='sms'){
-    location.href='sms:01050687232?body='+encodeURIComponent(t);
-  } else if(action==='kakao'){
-    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).catch(function(){});}
-    window.open('https://open.kakao.com/o/sv9FlUDi','_blank');
-  } else if(action==='share'){
-    if(navigator.share){navigator.share({text:t}).catch(function(){});}
-    else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t);alert('문의 내용이 복사되었습니다.');}
-    else{alert(t);}
-  }
-  delete inqPendingActionMap[suffix];
-}
-function inqToggleFormGeneric(suffix){
-  var box = document.getElementById('inqCollapseSub'+suffix);
-  if(!box) return;
-  var isOpen = box.style.display === 'block';
-  box.style.display = isOpen ? 'none' : 'block';
-  if(!isOpen){ box.scrollIntoView({behavior:'smooth', block:'start'}); }
-}
-function inqResetFormGeneric(suffix){
-  var ids = ['inqName','inqPhone','inqPart','inqArea','inqMsg','inqNoMsg'];
-  var isEn = window.__inqLang === 'en';
-  var phMap = {
-    inqName:{ko:'성함을 입력해주세요', en:'Enter your name'},
-    inqPhone:{ko:'연락 가능한 핸드폰 번호를 입력해주세요.', en:'Enter a phone number we can reach you at.'},
-    inqArea:{ko:'예: 강남구 논현동, 강서구 마곡동', en:'e.g. Nonhyeon-dong, Gangnam-gu'},
-    inqMsg:{ko:'궁금한 점을 자유롭게 남겨주세요', en:'Feel free to leave any questions'}
-  };
-  ids.forEach(function(id){
-    var el = document.getElementById(id+suffix);
-    if(!el) return;
-    if(el.type === 'checkbox'){ el.checked = false; }
-    else { el.value = ''; }
-    if(phMap[id]) el.setAttribute('placeholder', isEn ? phMap[id].en : phMap[id].ko);
-  });
-  ['inqSaved_name','inqSaved_phone','inqSaved_part','inqSaved_area','inqSaved_msg'].forEach(function(k){
-    try{ localStorage.removeItem(k); }catch(e){}
-  });
-  alert(isEn ? 'The form has been cleared.' : '입력하신 내용이 모두 초기화되었습니다.');
-}
 function inqBuildTextMain(){
   var g=function(id){var el=document.getElementById(id);return el?el.value.trim():'';};
   var name=g('inqNameMain'), phone=g('inqPhoneMain'), part=g('inqPartMain'), area=g('inqAreaMain'), msg=g('inqMsgMain');
@@ -7785,7 +7354,6 @@ function inqToggleFormSub(){
 (function(){
   function initInqPlaceholders(){
     var ids = ['inqFormCard', 'inqFormCardMain'];
-    ['_1','_2','_3','_4','_5','_6','_7','_8','_9','_10','_11','_13','_14','_16'].forEach(function(suf){ ids.push('inqFormCard'+suf); });
     var forms = ids.map(function(id){ return document.getElementById(id); });
     forms.forEach(function(form){
       if(!form) return;
@@ -7810,13 +7378,6 @@ function inqToggleFormSub(){
     inqArea:'area', inqAreaMain:'area',
     inqMsg:'msg', inqMsgMain:'msg'
   };
-  ['_1','_2','_3','_4','_5','_6','_7','_8','_9','_10','_11','_13','_14','_16'].forEach(function(suf){
-    fieldMap['inqName'+suf] = 'name';
-    fieldMap['inqPhone'+suf] = 'phone';
-    fieldMap['inqPart'+suf] = 'part';
-    fieldMap['inqArea'+suf] = 'area';
-    fieldMap['inqMsg'+suf] = 'msg';
-  });
   function restoreInqFields(){
     Object.keys(fieldMap).forEach(function(id){
       var el = document.getElementById(id);
