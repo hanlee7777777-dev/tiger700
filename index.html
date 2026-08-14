@@ -7629,6 +7629,10 @@ function __bindNoticeTriggers(){
       setTimeout(function(){
         document.querySelectorAll('.qBtnRow .qBtn').forEach(function(b){ void b.offsetWidth; });
       }, 200);
+      setTimeout(function(){
+        document.querySelectorAll('.qBtnRow .qBtn').forEach(function(b){ void b.offsetWidth; });
+        __restartQBtnAnim();
+      }, 500);
     });
   });
   document.querySelectorAll('[data-close]').forEach(function(el){
