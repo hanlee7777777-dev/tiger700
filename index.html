@@ -8164,24 +8164,40 @@ function inqOpenFormFromFooter(e){
     var el = document.getElementById(ids[i]);
     if(el && (getComputedStyle(el).display !== 'none')){ openId = ids[i]; break; }
   }
-  var btnId, collapseId;
+  var tag, hash;
   if(!openId){
-    btnId = 'inqToggleBtnMain'; collapseId = 'inqCollapseMain';
-  } else if(openId === 'subPage12'){
-    btnId = 'inqToggleBtnSub'; collapseId = 'inqCollapseSub';
+    tag = 'main'; hash = '';
+  } else if(openId === 'subPage'){
+    tag = 'sub1'; hash = '#sub1';
   } else {
-    var suf = (openId === 'subPage') ? '_1' : '_' + openId.replace('subPage','');
-    btnId = 'inqToggleBtnSub' + suf; collapseId = 'inqCollapseSub' + suf;
+    var n = openId.replace('subPage','');
+    tag = 'sub' + n; hash = '#sub' + n;
   }
-  var collapse = document.getElementById(collapseId);
-  var btn = document.getElementById(btnId);
-  if(collapse && collapse.style.display !== 'block'){
-    if(btn) btn.click();
-    else { collapse.style.display = 'block'; collapse.scrollIntoView({behavior:'smooth', block:'start'}); }
-  } else if(collapse){
-    collapse.scrollIntoView({behavior:'smooth', block:'start'});
-  }
+  var base = location.href.split('#')[0].split('?')[0];
+  window.open(base + '?inqOpen=' + tag + hash, '_blank');
 }
+function inqAutoOpenFromHash(){
+  var m = location.search.match(/[?&]inqOpen=([a-zA-Z0-9]+)/);
+  if(!m) return;
+  var tag = m[1];
+  var btnId, collapseId;
+  if(tag === 'main'){
+    btnId = 'inqToggleBtnMain'; collapseId = 'inqCollapseMain';
+  } else if(tag === 'sub12'){
+    btnId = 'inqToggleBtnSub'; collapseId = 'inqCollapseSub';
+  } else if(/^sub\d+$/.test(tag)){
+    var n = tag.replace('sub','');
+    btnId = 'inqToggleBtnSub_' + n; collapseId = 'inqCollapseSub_' + n;
+  } else { return; }
+  setTimeout(function(){
+    var collapse = document.getElementById(collapseId);
+    var btn = document.getElementById(btnId);
+    if(collapse && collapse.style.display !== 'block' && btn){ btn.click(); }
+    else if(collapse){ collapse.style.display='block'; collapse.scrollIntoView({behavior:'smooth', block:'start'}); }
+  }, 600);
+}
+if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', inqAutoOpenFromHash); }
+else { inqAutoOpenFromHash(); }
 function inqResetFormGeneric(suffix){
   var ids = ['inqName','inqPhone','inqPart','inqArea','inqMsg','inqNoMsg'];
   var isEn = window.__inqLang === 'en';
