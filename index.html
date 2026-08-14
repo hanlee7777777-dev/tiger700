@@ -2458,7 +2458,7 @@ section.simpleSteps .sub{
 .qTag{display:inline-block;font-size:15px;font-weight:800;letter-spacing:1px;color:#7A9FC4;background:#fff;padding:5px 12px;border-radius:20px;margin-bottom:20px;}
 .qTitle{margin:10px 0 14px;font-size:16px;font-weight:700;color:#1a2436;letter-spacing:-.3px;}
 .qBtnRow{display:flex;flex-direction:column;gap:11px;margin-top:10px;}
-.qBtnRow .qBtn[data-close][data-open="2"],.qBtnRow .qBtn[data-close][data-open="3"],.qBtnRow .qBtn[data-close][data-open="4"],.qBtnRow .qBtn[data-close][data-open="5"],.qBtnRow .qBtn[data-close][data-open="6"],.qBtnRow .qBtn[data-close][data-open="16"]{width:270px!important;max-width:96%!important;align-self:center;flex-shrink:0;margin:0 auto!important;}
+.qBtnRow .qBtn[data-close][data-open="2"],.qBtnRow .qBtn[data-close][data-open="3"],.qBtnRow .qBtn[data-close][data-open="4"],.qBtnRow .qBtn[data-close][data-open="5"],.qBtnRow .qBtn[data-close][data-open="6"],.qBtnRow .qBtn[data-close][data-open="16"]{width:clamp(270px,78%,600px)!important;max-width:96%!important;align-self:center;flex-shrink:0;margin:0 auto!important;}
 .qBtn{width:100%;border:2px solid #d9b96a;appearance:none;background:linear-gradient(135deg,#fdf6e2 0%,#f6dfa3 100%);border-radius:20px;padding:12px 18px;cursor:pointer;text-align:center;box-shadow:0 6px 16px rgba(180,140,50,.18);display:flex;flex-direction:column;gap:4px;}
 .qBtn:active{filter:brightness(.97);}
 
@@ -7597,6 +7597,35 @@ function __goHome(){
   window.scrollTo({top:0,left:0,behavior:'instant'});
   if(location.hash){ try{ history.pushState({sub:null}, '', location.pathname+location.search); }catch(e){} }
 }
+(function(){
+  var __subPageIds = ['subPage','subPage2','subPage3','subPage4','subPage5','subPage6','subPage7','subPage8','subPage9','subPage10','subPage11','subPage12','subPage13','subPage14','subPage15','subPage16'];
+  function __forceReflowNow(){
+    document.querySelectorAll('.qBtnRow .qBtn').forEach(function(b){ void b.offsetWidth; });
+  }
+  function __forceReflowBurst(){
+    __forceReflowNow();
+    requestAnimationFrame(function(){
+      requestAnimationFrame(__forceReflowNow);
+    });
+    setTimeout(__forceReflowNow, 60);
+    setTimeout(__forceReflowNow, 180);
+    setTimeout(__forceReflowNow, 400);
+    setTimeout(__forceReflowNow, 700);
+  }
+  var __mo = new MutationObserver(function(mutations){
+    for(var i=0;i<mutations.length;i++){
+      var t = mutations[i].target;
+      if(t && t.id && __subPageIds.indexOf(t.id) !== -1){
+        var isVisible = t.style.display === 'block' || t.classList.contains('open');
+        if(isVisible){ __forceReflowBurst(); }
+      }
+    }
+  });
+  __subPageIds.forEach(function(id){
+    var el = document.getElementById(id);
+    if(el){ __mo.observe(el, {attributes:true, attributeFilter:['style','class']}); }
+  });
+})();
 function __restartQBtnAnim(){
   document.querySelectorAll('.qBtn.qBtnBlue, .qBtn.qBtnGold, .qBtn.qBtnPink').forEach(function(btn){
     btn.style.animation='none';
