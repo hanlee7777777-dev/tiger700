@@ -2443,7 +2443,7 @@ section.simpleSteps .sub{
 .welcomeWrap{margin:28px 4px 4px;padding:11px 20px 60px;position:relative;text-align:center;}
 .welcomeWrap::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:44px;height:1px;background:linear-gradient(90deg,transparent,#c9a862,transparent);}
 .welcomeQMark{display:block;font-size:42px;font-weight:800;color:#b08d4d;line-height:1;margin-bottom:2px;font-family:Georgia,serif;opacity:.85;}
-.welcomeBrand{display:block;font-size:20px;font-weight:800;letter-spacing:4px;color:#b08d4d;margin-bottom:8px;text-transform:uppercase;}
+.welcomeBrand{display:block;font-size:20px;font-weight:600;letter-spacing:4px;color:#b08d4d;margin-bottom:8px;text-transform:uppercase;}
 @keyframes freeShippingBlink{0%,100%{opacity:1;}50%{opacity:.4;}}
 .welcomeText{margin:0;font-size:20px;font-weight:600;color:#3d4758;letter-spacing:-.3px;line-height:1.5;}
 .baHeadBox{margin:0 4px 20px;padding:8px 4px 0;background:transparent;border:0;text-align:left;box-shadow:none;position:relative;}
@@ -4163,7 +4163,7 @@ body.subOpen main.mobile{display:none}
   </div>
 
   <div>
-    <button type="button" id="inqToggleBtnMain" onclick="inqToggleFormMain()" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 24px;">
+    <button type="button" id="inqToggleBtnMain" onclick="inqToggleFormMain()" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 24px;">
       <span>간편 문의 바로가기</span>
     </button>
     <div id="inqCollapseMain" style="display:none;">
@@ -4583,12 +4583,12 @@ document.addEventListener('DOMContentLoaded', function(){
       
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
-    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
+    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi" onclick="inqOpenFormFromFooter(event)">카카오톡 상담</a>
     <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
   </div>
       
             <div style="max-width:600px;margin:0 auto;padding:0 18px;">
-<button type="button" id="inqToggleBtnSub_1" onclick="inqToggleFormGeneric('_1')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:16px 0 40px;">
+<button type="button" id="inqToggleBtnSub_1" onclick="inqToggleFormGeneric('_1')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:16px 0 40px;">
         <span>간편 문의 바로가기</span>
       </button>
       <div id="inqCollapseSub_1" style="display:none;">
@@ -4751,7 +4751,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     
       
-            <button type="button" id="inqToggleBtnSub_2" onclick="inqToggleFormGeneric('_2')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 24px;">
+            <button type="button" id="inqToggleBtnSub_2" onclick="inqToggleFormGeneric('_2')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 24px;">
         <span>간편 문의 바로가기</span>
       </button>
       <div id="inqCollapseSub_2" style="display:none;">
@@ -4857,7 +4857,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </main>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
-    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
+    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi" onclick="inqOpenFormFromFooter(event)">카카오톡 상담</a>
     <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
   </div>
 
@@ -4925,7 +4925,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     
       
-            <button type="button" id="inqToggleBtnSub_3" onclick="inqToggleFormGeneric('_3')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 24px;">
+            <button type="button" id="inqToggleBtnSub_3" onclick="inqToggleFormGeneric('_3')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 24px;">
         <span>간편 문의 바로가기</span>
       </button>
       <div id="inqCollapseSub_3" style="display:none;">
@@ -5031,7 +5031,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </main>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
-    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
+    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi" onclick="inqOpenFormFromFooter(event)">카카오톡 상담</a>
     <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
   </div>
 
@@ -5099,7 +5099,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     
       
-            <button type="button" id="inqToggleBtnSub_4" onclick="inqToggleFormGeneric('_4')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 24px;">
+            <button type="button" id="inqToggleBtnSub_4" onclick="inqToggleFormGeneric('_4')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 24px;">
         <span>간편 문의 바로가기</span>
       </button>
       <div id="inqCollapseSub_4" style="display:none;">
@@ -5205,7 +5205,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </main>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
-    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
+    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi" onclick="inqOpenFormFromFooter(event)">카카오톡 상담</a>
     <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
   </div>
 
@@ -5273,7 +5273,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     
       
-            <button type="button" id="inqToggleBtnSub_5" onclick="inqToggleFormGeneric('_5')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 24px;">
+            <button type="button" id="inqToggleBtnSub_5" onclick="inqToggleFormGeneric('_5')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 24px;">
         <span>간편 문의 바로가기</span>
       </button>
       <div id="inqCollapseSub_5" style="display:none;">
@@ -5379,7 +5379,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </main>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
-    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
+    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi" onclick="inqOpenFormFromFooter(event)">카카오톡 상담</a>
     <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
   </div>
 
@@ -5434,7 +5434,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     
       
-            <button type="button" id="inqToggleBtnSub_6" onclick="inqToggleFormGeneric('_6')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 24px;">
+            <button type="button" id="inqToggleBtnSub_6" onclick="inqToggleFormGeneric('_6')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 24px;">
         <span>간편 문의 바로가기</span>
       </button>
       <div id="inqCollapseSub_6" style="display:none;">
@@ -5540,7 +5540,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </main>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
-    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
+    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi" onclick="inqOpenFormFromFooter(event)">카카오톡 상담</a>
     <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
   </div>
 
@@ -5627,12 +5627,12 @@ document.addEventListener('DOMContentLoaded', function(){
       
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
-    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
+    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi" onclick="inqOpenFormFromFooter(event)">카카오톡 상담</a>
     <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
   </div>
       
             <div style="max-width:600px;margin:0 auto;padding:0 18px;">
-<button type="button" id="inqToggleBtnSub_7" onclick="inqToggleFormGeneric('_7')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:16px 0 40px;">
+<button type="button" id="inqToggleBtnSub_7" onclick="inqToggleFormGeneric('_7')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:16px 0 40px;">
         <span>간편 문의 바로가기</span>
       </button>
       <div id="inqCollapseSub_7" style="display:none;">
@@ -5819,12 +5819,12 @@ document.addEventListener('DOMContentLoaded', function(){
       
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
-    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
+    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi" onclick="inqOpenFormFromFooter(event)">카카오톡 상담</a>
     <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
   </div>
       
             <div style="max-width:600px;margin:0 auto;padding:0 18px;">
-<button type="button" id="inqToggleBtnSub_8" onclick="inqToggleFormGeneric('_8')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:16px 0 40px;">
+<button type="button" id="inqToggleBtnSub_8" onclick="inqToggleFormGeneric('_8')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:16px 0 40px;">
         <span>간편 문의 바로가기</span>
       </button>
       <div id="inqCollapseSub_8" style="display:none;">
@@ -6006,12 +6006,12 @@ document.addEventListener('DOMContentLoaded', function(){
       
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
-    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
+    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi" onclick="inqOpenFormFromFooter(event)">카카오톡 상담</a>
     <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
   </div>
       
             <div style="max-width:600px;margin:0 auto;padding:0 18px;">
-<button type="button" id="inqToggleBtnSub_9" onclick="inqToggleFormGeneric('_9')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:16px 0 40px;">
+<button type="button" id="inqToggleBtnSub_9" onclick="inqToggleFormGeneric('_9')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:16px 0 40px;">
         <span>간편 문의 바로가기</span>
       </button>
       <div id="inqCollapseSub_9" style="display:none;">
@@ -6201,12 +6201,12 @@ document.addEventListener('DOMContentLoaded', function(){
       
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
-    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
+    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi" onclick="inqOpenFormFromFooter(event)">카카오톡 상담</a>
     <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
   </div>
       
             <div style="max-width:600px;margin:0 auto;padding:0 18px;">
-<button type="button" id="inqToggleBtnSub_10" onclick="inqToggleFormGeneric('_10')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:16px 0 40px;">
+<button type="button" id="inqToggleBtnSub_10" onclick="inqToggleFormGeneric('_10')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:16px 0 40px;">
         <span>간편 문의 바로가기</span>
       </button>
       <div id="inqCollapseSub_10" style="display:none;">
@@ -6387,12 +6387,12 @@ document.addEventListener('DOMContentLoaded', function(){
       
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
-    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
+    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi" onclick="inqOpenFormFromFooter(event)">카카오톡 상담</a>
     <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
   </div>
       
             <div style="max-width:600px;margin:0 auto;padding:0 18px;">
-<button type="button" id="inqToggleBtnSub_11" onclick="inqToggleFormGeneric('_11')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:16px 0 40px;">
+<button type="button" id="inqToggleBtnSub_11" onclick="inqToggleFormGeneric('_11')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:16px 0 40px;">
         <span>간편 문의 바로가기</span>
       </button>
       <div id="inqCollapseSub_11" style="display:none;">
@@ -6560,12 +6560,12 @@ document.addEventListener('DOMContentLoaded', function(){
       
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
-    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
+    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi" onclick="inqOpenFormFromFooter(event)">카카오톡 상담</a>
     <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
   </div>
       
             <div style="max-width:600px;margin:0 auto;padding:0 18px;">
-<button type="button" id="inqToggleBtnSub_13" onclick="inqToggleFormGeneric('_13')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:16px 0 40px;">
+<button type="button" id="inqToggleBtnSub_13" onclick="inqToggleFormGeneric('_13')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:16px 0 40px;">
         <span>간편 문의 바로가기</span>
       </button>
       <div id="inqCollapseSub_13" style="display:none;">
@@ -6736,12 +6736,12 @@ document.addEventListener('DOMContentLoaded', function(){
       
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
-    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
+    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi" onclick="inqOpenFormFromFooter(event)">카카오톡 상담</a>
     <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
   </div>
       
             <div style="max-width:600px;margin:0 auto;padding:0 18px;">
-<button type="button" id="inqToggleBtnSub_14" onclick="inqToggleFormGeneric('_14')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:16px 0 40px;">
+<button type="button" id="inqToggleBtnSub_14" onclick="inqToggleFormGeneric('_14')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:16px 0 40px;">
         <span>간편 문의 바로가기</span>
       </button>
       <div id="inqCollapseSub_14" style="display:none;">
@@ -7020,7 +7020,7 @@ document.addEventListener('DOMContentLoaded', function(){
 <p style="text-align:center;color:#9aa3ad;font-size:12px;padding:16px 20px 20px;">Copyrightⓒ 카글라스자동차유리복원<br>All Right Reserved.</p>
   <div class="foot subFoot3">
     <a class="sTel" href="tel:01050687232">전화 상담</a>
-    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
+    <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi" onclick="inqOpenFormFromFooter(event)">카카오톡 상담</a>
     <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
   </div>
 </div>
@@ -7070,7 +7070,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     
       
-            <button type="button" id="inqToggleBtnSub_16" onclick="inqToggleFormGeneric('_16')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 24px;">
+            <button type="button" id="inqToggleBtnSub_16" onclick="inqToggleFormGeneric('_16')" style="width:100%;height:58px;border:2px solid #8fc9a3;border-radius:16px;background:#eaf7ee;color:#1c5e33;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);cursor:pointer;margin:32px 0 24px;">
         <span>간편 문의 바로가기</span>
       </button>
       <div id="inqCollapseSub_16" style="display:none;">
@@ -7286,7 +7286,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 <div class="subFoot3">
   <a class="sTel" href="tel:01050687232">전화 상담</a>
-  <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi">카카오톡 상담</a>
+  <a class="sKakao" href="https://open.kakao.com/o/sv9FlUDi" onclick="inqOpenFormFromFooter(event)">카카오톡 상담</a>
   <a class="sBlog" href="https://m.blog.naver.com/carglass_/222107218351" target="_blank">네이버 블로그</a>
 </div>
 
@@ -8155,6 +8155,32 @@ function inqToggleFormGeneric(suffix){
   var isOpen = box.style.display === 'block';
   box.style.display = isOpen ? 'none' : 'block';
   if(!isOpen){ box.scrollIntoView({behavior:'smooth', block:'start'}); }
+}
+function inqOpenFormFromFooter(e){
+  if(e && e.preventDefault) e.preventDefault();
+  var ids = ['subPage','subPage2','subPage3','subPage4','subPage5','subPage6','subPage7','subPage8','subPage9','subPage10','subPage11','subPage12','subPage13','subPage14','subPage16'];
+  var openId = null;
+  for(var i=0;i<ids.length;i++){
+    var el = document.getElementById(ids[i]);
+    if(el && (getComputedStyle(el).display !== 'none')){ openId = ids[i]; break; }
+  }
+  var btnId, collapseId;
+  if(!openId){
+    btnId = 'inqToggleBtnMain'; collapseId = 'inqCollapseMain';
+  } else if(openId === 'subPage12'){
+    btnId = 'inqToggleBtnSub'; collapseId = 'inqCollapseSub';
+  } else {
+    var suf = (openId === 'subPage') ? '_1' : '_' + openId.replace('subPage','');
+    btnId = 'inqToggleBtnSub' + suf; collapseId = 'inqCollapseSub' + suf;
+  }
+  var collapse = document.getElementById(collapseId);
+  var btn = document.getElementById(btnId);
+  if(collapse && collapse.style.display !== 'block'){
+    if(btn) btn.click();
+    else { collapse.style.display = 'block'; collapse.scrollIntoView({behavior:'smooth', block:'start'}); }
+  } else if(collapse){
+    collapse.scrollIntoView({behavior:'smooth', block:'start'});
+  }
 }
 function inqResetFormGeneric(suffix){
   var ids = ['inqName','inqPhone','inqPart','inqArea','inqMsg','inqNoMsg'];
