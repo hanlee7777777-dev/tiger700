@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://topglass911.com/sitemap.xml
