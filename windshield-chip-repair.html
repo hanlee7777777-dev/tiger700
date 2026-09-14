@@ -68,10 +68,13 @@
   .body-text{max-width:680px; color:var(--steel); font-size:17px;}
   .body-text p + p{margin-top:14px;}
 
-  table.criteria{width:100%; border-collapse:collapse; margin-top:8px;}
-  table.criteria th, table.criteria td{text-align:left; padding:14px 16px; border-bottom:1px solid var(--line); font-size:17px;}
+  table.criteria{width:100%; border-collapse:collapse; margin-top:8px; table-layout:fixed;}
+  table.criteria th, table.criteria td{text-align:left; padding:12px 8px; border-bottom:1px solid var(--line); font-size:15px; word-break:keep-all; vertical-align:top;}
   table.criteria th{color:var(--steel); font-weight:600; background:var(--paper);}
   table.criteria td strong{color:var(--ink); font-weight:400;}
+  table.criteria th:nth-child(1), table.criteria td:nth-child(1){width:23%;}
+  table.criteria th:nth-child(2), table.criteria td:nth-child(2){width:45%;}
+  table.criteria th:nth-child(3), table.criteria td:nth-child(3){width:32%;}
 
   .process-grid{display:grid; grid-template-columns:1fr; gap:0; margin-top:8px;}
   .process-step{padding:20px; border-left:none; border-top:1px solid var(--line);}
