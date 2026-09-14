@@ -14,7 +14,7 @@
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
 <style>
   html, body { background:#e7eaed; }
-  .site-frame{ max-width:480px; margin:0 auto; background:#fff; min-height:100vh; box-shadow:0 0 24px rgba(0,0,0,.12); overflow-x:hidden; position:relative; }
+  .site-frame{ max-width:480px; margin:0 auto; background:#fff; min-height:100vh; box-shadow:0 0 24px rgba(0,0,0,.12); position:relative; }
   @media (min-width:1024px){ .site-frame{ max-width:650px; box-shadow:0 24px 70px rgba(6,20,40,.4); } }
 
   :root{
@@ -41,7 +41,7 @@
   nav.main a{padding:4px 0; border-bottom:2px solid transparent;}
   nav.main a:hover, nav.main a.active{border-color:var(--gold);}
   .header-cta{display:flex; align-items:center; gap:12px;}
-  .tel{font-weight:700; font-size:15px; color:var(--gold);}
+  .tel{font-weight:700; font-size:15px; color:var(--gold); white-space:nowrap;}
   .menu-toggle{display:none; background:none; border:none; font-size:26px; line-height:1; padding:4px 8px; cursor:pointer; color:var(--ink);}
   @media (max-width:820px){
     nav.main{display:none;}
@@ -248,7 +248,9 @@
       <div class="kicker" style="color:var(--steel);">GLASS GUIDE</div>
       <h2>자동차유리, 단순한 창문이 아닙니다</h2>
     </div>
-    <img src="images/glass-guide.jpg" alt="자동차 유리복원" style="width:100%; margin-bottom:24px; display:block;">
+  </div>
+  <img src="images/glass-guide.jpg" alt="자동차 유리복원" style="width:100%; margin:16px 0 24px; display:block;">
+  <div class="wrap" style="padding-left:20px; padding-right:20px;">
     <div class="info-grid">
       <div class="info-card">
         <h3>시야를 지키는 핵심 안전장치</h3>
