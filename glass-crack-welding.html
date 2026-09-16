@@ -666,6 +666,7 @@ document.addEventListener('selectstart', function(e){
       areaSub: function(name){ return '아래 내용을 남기고 [문자로 보내기]를 누르면 ' + name + ' 담당자에게 문자가 전송됩니다.'; },
       areaLabelDefault: '지역을 선택해 주세요',
       areaSubDefault: '위 목록에서 지역을 클릭하면 해당 담당자에게 문자로 문의할 수 있어요.',
+      msgPlaceholder: '궁금한 점을 자유롭게 남겨주세요',
       toggleOpen: '간편 문의 바로가기',
       toggleClose: '간편 문의 바로가기 - 닫기',
       noMsgText: '추가로 전달할 사항은 없습니다.',
@@ -683,6 +684,7 @@ document.addEventListener('selectstart', function(e){
       areaSub: function(name){ return 'Fill in the details and tap [Send by Text] to send a message to the ' + name + ' representative.'; },
       areaLabelDefault: 'Please select a region',
       areaSubDefault: 'Click a region above to send a text inquiry to the local representative.',
+      msgPlaceholder: 'Feel free to leave any questions',
       toggleOpen: 'Quick Inquiry',
       toggleClose: 'Quick Inquiry - Close',
       noMsgText: 'No additional comments.',
@@ -700,6 +702,7 @@ document.addEventListener('selectstart', function(e){
       areaSub: function(name){ return '填写下方内容后点击[发送短信]，即可将短信发送给' + name + '负责人。'; },
       areaLabelDefault: '请选择地区',
       areaSubDefault: '点击上方地区，即可向当地负责人发送短信咨询。',
+      msgPlaceholder: '请随意留下您的问题',
       toggleOpen: '快速咨询',
       toggleClose: '快速咨询 - 关闭',
       noMsgText: '没有其他要说明的。',
@@ -717,6 +720,7 @@ document.addEventListener('selectstart', function(e){
       areaSub: function(name){ return '填寫下方內容後點選[傳送簡訊]，即可將簡訊傳送給' + name + '負責人。'; },
       areaLabelDefault: '請選擇地區',
       areaSubDefault: '點選上方地區，即可向當地負責人傳送簡訊諮詢。',
+      msgPlaceholder: '請隨意留下您的問題',
       toggleOpen: '快速諮詢',
       toggleClose: '快速諮詢 - 關閉',
       noMsgText: '沒有其他要說明的。',
@@ -742,6 +746,12 @@ document.addEventListener('selectstart', function(e){
     if(btn && box){
       var span = btn.querySelector('span');
       if(span) span.textContent = (box.style.display === 'block') ? t().toggleClose : t().toggleOpen;
+    }
+    var msgEl = document.getElementById('inqMsg');
+    if(msgEl){
+      var ph = t().msgPlaceholder;
+      msgEl.setAttribute('data-ph', ph);
+      if(!msgEl.value) msgEl.setAttribute('placeholder', ph);
     }
   };
 
