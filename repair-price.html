@@ -73,11 +73,12 @@
 
   /* quick inquiry (간편문의) */
   .inq-toggle-btn{width:100%; height:56px; border:2px solid var(--hazard); border-radius:12px; background:var(--glass-tint); color:var(--glass-deep); font-size:17px; font-weight:700; display:flex; align-items:center; justify-content:center; gap:8px; cursor:pointer; margin-top:24px; scroll-margin-top:90px;}
-  .inq-form-card{background:var(--white); border:1px solid var(--line); border-radius:16px; padding:24px 20px; box-shadow:0 4px 16px rgba(20,24,28,.08); margin-top:16px;}
+  .inq-form-card{background:var(--white); border:0.8px solid #000; border-radius:16px; padding:24px 20px; box-shadow:0 4px 16px rgba(20,24,28,.08); margin-top:16px;}
   .inq-form-card label{display:block; font-size:17px; font-weight:600; color:var(--ink); margin:16px 0 7px;}
   .inq-form-card select, .inq-form-card textarea{width:100%; border:1px solid var(--line); border-radius:8px; padding:13px; font-size:17px; font-weight:700; font-family:inherit; color:var(--ink); background:var(--white);}
   .inq-form-card textarea{min-height:100px; resize:vertical;}
-  .inq-area-label{font-size:20px; font-weight:800; color:var(--ink); margin:0 0 5px;}
+  .inq-area-label{font-size:22px; font-weight:800; color:#1a73e8; margin:0 0 5px;}
+  .inq-area-label-sub{font-size:19px; font-weight:700;}
   .inq-area-sub{font-size:17px; color:var(--steel); margin:0 0 16px; line-height:1.5;}
   .inq-form-card label.inq-quick-label{display:flex; align-items:center; gap:16px; margin:4px 0 6px; font-size:17px; font-weight:700; color:var(--ink); cursor:pointer; line-height:20px;}
   .inq-quick-label input{width:20px; height:20px; margin:0; padding:0; accent-color:var(--hazard); flex-shrink:0; display:block;}
@@ -661,7 +662,8 @@ document.addEventListener('selectstart', function(e){
 
   var I18N = {
     ko: {
-      areaLabel: function(name){ return name + ' 담당자에게 문자 문의'; },
+      areaLabelPrefix: '',
+      areaLabelSuffix: ' 담당자에게 문자 문의',
       areaSub: function(name){ return '아래 내용을 남기고 [문자로 보내기]를 누르면 ' + name + ' 담당자에게 문자가 전송됩니다.'; },
       areaLabelDefault: '지역을 선택해 주세요',
       areaSubDefault: '위 목록에서 지역을 클릭하면 해당 담당자에게 문자로 문의할 수 있어요.',
@@ -679,7 +681,8 @@ document.addEventListener('selectstart', function(e){
       selectAreaFirst: '먼저 위 목록에서 지역을 선택해 주세요.'
     },
     en: {
-      areaLabel: function(name){ return 'Text ' + name + ' Representative'; },
+      areaLabelPrefix: 'Text ',
+      areaLabelSuffix: ' Representative',
       areaSub: function(name){ return 'Fill in the details and tap [Send by Text] to send a message to the ' + name + ' representative.'; },
       areaLabelDefault: 'Please select a region',
       areaSubDefault: 'Click a region above to send a text inquiry to the local representative.',
@@ -697,7 +700,8 @@ document.addEventListener('selectstart', function(e){
       selectAreaFirst: 'Please select a region from the list above first.'
     },
     'zh-CN': {
-      areaLabel: function(name){ return '向' + name + '负责人发送短信'; },
+      areaLabelPrefix: '向',
+      areaLabelSuffix: '负责人发送短信',
       areaSub: function(name){ return '填写下方内容后点击[发送短信]，即可将短信发送给' + name + '负责人。'; },
       areaLabelDefault: '请选择地区',
       areaSubDefault: '点击上方地区，即可向当地负责人发送短信咨询。',
@@ -715,7 +719,8 @@ document.addEventListener('selectstart', function(e){
       selectAreaFirst: '请先在上方列表中选择地区。'
     },
     'zh-TW': {
-      areaLabel: function(name){ return '向' + name + '負責人傳送簡訊'; },
+      areaLabelPrefix: '向',
+      areaLabelSuffix: '負責人傳送簡訊',
       areaSub: function(name){ return '填寫下方內容後點選[傳送簡訊]，即可將簡訊傳送給' + name + '負責人。'; },
       areaLabelDefault: '請選擇地區',
       areaSubDefault: '點選上方地區，即可向當地負責人傳送簡訊諮詢。',
@@ -738,7 +743,13 @@ document.addEventListener('selectstart', function(e){
   window.__inqRefreshLang = function(){
     var label = document.getElementById('inqAreaLabel');
     var sub = document.getElementById('inqAreaSub');
-    if(label) label.textContent = inqAreaNameKo ? t().areaLabel(inqAreaName) : t().areaLabelDefault;
+    if(label){
+      if(inqAreaNameKo){
+        label.innerHTML = (t().areaLabelPrefix || '') + inqAreaName + '<span class="inq-area-label-sub">' + (t().areaLabelSuffix || '') + '</span>';
+      } else {
+        label.textContent = t().areaLabelDefault;
+      }
+    }
     if(sub) sub.textContent = inqAreaNameKo ? t().areaSub(inqAreaName) : t().areaSubDefault;
     var box = document.getElementById('inqCollapse');
     var btn = document.getElementById('inqToggleBtn');
