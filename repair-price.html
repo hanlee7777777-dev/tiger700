@@ -745,7 +745,7 @@ document.addEventListener('selectstart', function(e){
     var sub = document.getElementById('inqAreaSub');
     if(label){
       if(inqAreaNameKo){
-        label.innerHTML = (t().areaLabelPrefix || '') + inqAreaName + '<span class="inq-area-label-sub">' + (t().areaLabelSuffix || '') + '</span>';
+        label.innerHTML = '<span style="color:#1a73e8;">' + (t().areaLabelPrefix || '') + '</span><span style="color:#1a73e8;">' + inqAreaName + '</span><span class="inq-area-label-sub" style="color:#1a73e8;">' + (t().areaLabelSuffix || '') + '</span>';
       } else {
         label.textContent = t().areaLabelDefault;
       }
