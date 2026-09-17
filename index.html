@@ -104,9 +104,11 @@
 
   /* service area */
   .area-chips{display:grid; grid-template-columns:1fr; gap:12px; margin-top:16px;}
-  .area-chip{display:flex; align-items:center; justify-content:space-between; padding:16px 20px; border:1.5px solid rgba(20,24,28,.4); border-radius:12px; font-size:19px; font-weight:700; color:var(--ink); text-align:left; background:#EBF5ED; letter-spacing:.05em; box-shadow:0 3px 8px rgba(20,24,28,.16); cursor:pointer; width:100%;}
+  .area-chip{display:flex; align-items:center; justify-content:space-between; padding:16px 20px; border:1.5px solid rgba(20,24,28,.4); border-radius:12px; font-size:19px; font-weight:700; color:var(--ink); text-align:left; letter-spacing:.05em; box-shadow:0 3px 8px rgba(20,24,28,.16); cursor:pointer; width:100%;}
+  .area-chip.area-chip-a{background:linear-gradient(135deg,#DCEAFB,#C4DBF6);}
+  .area-chip.area-chip-b{background:linear-gradient(135deg,#F0F9F1,#DCEFE0);}
   html[lang="en"] .area-chip, html[lang="zh-Hans"] .area-chip, html[lang="zh-Hant"] .area-chip{letter-spacing:normal; font-size:17px;}
-  .area-chip .area-chip-cta{display:inline-flex; align-items:center; gap:4px; font-size:14px; font-weight:700; color:var(--white); background:var(--hazard); border-radius:20px; padding:7px 14px; letter-spacing:0; white-space:nowrap;}
+  .area-chip .area-chip-cta{display:inline-flex; align-items:center; gap:4px; font-size:15px; font-weight:500; color:#000; background:#F6DBAE; border:0.5px solid #000; border-radius:20px; padding:7px 14px; letter-spacing:0; white-space:nowrap;}
 
   /* quick inquiry (간편문의) */
   .inq-toggle-btn{width:100%; height:56px; border:2px solid var(--hazard); border-radius:12px; background:var(--glass-tint); color:var(--glass-deep); font-size:17px; font-weight:700; display:flex; align-items:center; justify-content:center; gap:8px; cursor:pointer; margin-top:24px; scroll-margin-top:90px;}
@@ -441,29 +443,29 @@ window.addEventListener('load', portfolioInit);
       <p style="color:var(--steel); font-size:17px; margin-top:10px;">교체가 필요할지 수리가 가능할지 가장 합리적인 방법을 안내합니다.</p>
     </div>
     <div class="area-chips">
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('서울','01050687232');return false;"><span>서울</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('안양 군포','01050687232');return false;"><span>안양 군포</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('광명 시흥','01050687232');return false;"><span>광명 시흥</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('고양','01050687232');return false;"><span>고양</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('일산 파주','010-4904-4241');return false;"><span>일산 파주</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('김포 의정부','010-4904-4241');return false;"><span>김포 의정부</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('목감 매송','01050687232');return false;"><span>목감 매송</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('팔탄 향남','01050687232');return false;"><span>팔탄 향남</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('부천','01050687232');return false;"><span>부천</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('용인 성남','010-2265-8840');return false;"><span>용인 성남</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('과천','01050687232');return false;"><span>과천</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('동탄 수원','010-2265-8840');return false;"><span>동탄 수원</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('인천','010-5656-1362');return false;"><span>인천</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('대전 세종','010-4753-0935');return false;"><span>대전 세종</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('대구 경북','010-3509-4972');return false;"><span>대구 경북</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('부산 경남','010-8534-9934');return false;"><span>부산 경남</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('전남 광주','010-6590-2747');return false;"><span>전남 광주</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('원주 강원','010-8489-9909');return false;"><span>원주 강원</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('충남 충북','010-4753-0935');return false;"><span>충남 충북</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('전남 전북','010-2754-0138');return false;"><span>전남 전북</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('거제','010-2560-5721');return false;"><span>거제</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('평택 동탄','010-2437-4124');return false;"><span>평택 동탄</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip" href="javascript:void(0)" onclick="openAreaInquiry('진천','010-8846-1100');return false;"><span>진천</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('서울','01050687232');return false;"><span>서울</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('안양 군포','01050687232');return false;"><span>안양 군포</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('광명 시흥','01050687232');return false;"><span>광명 시흥</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('고양','01050687232');return false;"><span>고양</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('일산 파주','010-4904-4241');return false;"><span>일산 파주</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('김포 의정부','010-4904-4241');return false;"><span>김포 의정부</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('목감 매송','01050687232');return false;"><span>목감 매송</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('팔탄 향남','01050687232');return false;"><span>팔탄 향남</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('부천','01050687232');return false;"><span>부천</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('용인 성남','010-2265-8840');return false;"><span>용인 성남</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('과천','01050687232');return false;"><span>과천</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('동탄 수원','010-2265-8840');return false;"><span>동탄 수원</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('인천','010-5656-1362');return false;"><span>인천</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('대전 세종','010-4753-0935');return false;"><span>대전 세종</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('대구 경북','010-3509-4972');return false;"><span>대구 경북</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('부산 경남','010-8534-9934');return false;"><span>부산 경남</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('전남 광주','010-6590-2747');return false;"><span>전남 광주</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('원주 강원','010-8489-9909');return false;"><span>원주 강원</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('충남 충북','010-4753-0935');return false;"><span>충남 충북</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('전남 전북','010-2754-0138');return false;"><span>전남 전북</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('거제','010-2560-5721');return false;"><span>거제</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('평택 동탄','010-2437-4124');return false;"><span>평택 동탄</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('진천','010-8846-1100');return false;"><span>진천</span><span class="area-chip-cta">문자 문의</span></a>
     </div>
 
     <button type="button" class="inq-toggle-btn" id="inqToggleBtn" onclick="inqToggleForm()">
