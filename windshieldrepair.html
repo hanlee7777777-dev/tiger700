@@ -976,26 +976,30 @@ document.addEventListener('selectstart', function(e){
   };
 
   var LANG_KO_NAME = {'en':'영어', 'zh-CN':'중국어 간체', 'zh-TW':'중국어 번체'};
-  function msgPrefix(){ var n = LANG_KO_NAME[curLang()]; return t().prefix + (n ? ' (' + n + ' 고객)' : ''); }
+  function msgPrefix(){ var n = LANG_KO_NAME[curLang()]; return I18N.ko.prefix + (n ? ' (' + n + ' 고객)' : ''); }
   function areaForMsg(){ return (inqAreaName && inqAreaName !== inqAreaNameKo) ? inqAreaName + ' (' + inqAreaNameKo + ')' : inqAreaNameKo; }
   function inqBuildText(){
+    var K = I18N.ko;
     var quickCb = document.getElementById('inqQuick');
     if(quickCb && quickCb.checked){
       var qLines = [msgPrefix()];
-      if(inqAreaNameKo) qLines.push(t().areaLine(areaForMsg()));
-      qLines.push(t().quickMsg);
+      if(inqAreaNameKo) qLines.push(K.areaLine(inqAreaNameKo));
+      qLines.push(K.quickMsg);
       return qLines.join('\n');
     }
     var g = function(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; };
     var serviceType = g('inqServiceType'), part = g('inqPart'), carType = g('inqCarType'), msg = g('inqMsg');
+    var noMsgCb = document.getElementById('inqNoMsg');
+    if(noMsgCb && noMsgCb.checked) msg = K.noMsgText;
     var lines = [msgPrefix()];
-    if(inqAreaNameKo) lines.push(t().areaLine(areaForMsg()));
-    if(serviceType) lines.push(t().serviceLine(serviceType));
-    if(part) lines.push(t().partLine(part));
-    if(carType) lines.push(t().carLine(carType));
-    if(msg) lines.push(t().msgLine(msg));
+    if(inqAreaNameKo) lines.push(K.areaLine(inqAreaNameKo));
+    if(serviceType) lines.push(K.serviceLine(serviceType));
+    if(part) lines.push(K.partLine(part));
+    if(carType) lines.push(K.carLine(carType));
+    if(msg) lines.push(K.msgLine(msg));
     return lines.join('\n');
   }
+
 
   window.inqResetForm = function(){
     ['inqServiceType','inqPart','inqCarType','inqMsg'].forEach(function(id){
