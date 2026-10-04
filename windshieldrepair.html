@@ -592,6 +592,19 @@
         </div>
       </div>
     </div>
+    <div id="inqCallOverlay" style="display:none;position:fixed;inset:0;z-index:20000;background:rgba(10,20,35,.55);align-items:center;justify-content:center;padding:20px;" onclick="if(event.target===this) inqCloseCall()">
+      <div style="background:var(--white);border-radius:22px;max-width:400px;width:100%;padding:26px 22px 22px;box-shadow:0 20px 50px rgba(0,0,0,.3);text-align:center;">
+        <div id="inqCallTitle" style="margin:0 0 16px;font-size:19px;font-weight:700;line-height:1.3;color:var(--ink);"></div>
+        <div style="background:var(--glass-tint);border:1.5px solid var(--glass);border-radius:14px;padding:18px 16px;font-size:17px;color:var(--steel);line-height:1.6;">
+          <p id="inqCallMsg" style="margin:0;"></p>
+          <p id="inqCallNum" style="margin:10px 0 0;font-size:24px;font-weight:800;color:var(--ink);letter-spacing:.02em;"></p>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:20px;">
+          <button type="button" id="inqCallCancel" onclick="inqCloseCall()" style="flex:1;height:52px;border:1px solid var(--line);border-radius:14px;background:var(--paper);color:var(--steel);font-size:16px;font-weight:800;cursor:pointer;"></button>
+          <button type="button" id="inqCallOk" onclick="inqConfirmCall()" style="flex:1;height:52px;border:0;border-radius:14px;background:var(--hazard);color:var(--white);font-size:16px;font-weight:800;cursor:pointer;"></button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -734,6 +747,7 @@ document.addEventListener('selectstart', function(e){
 
   var I18N = {
     ko: {
+      callTitle: '전화 상담 연결', callMsg: function(n){ return n + ' 담당자에게 전화를 연결합니다.'; }, callCancel: '취소', callOk: '확인, 전화하기',
       placeBtn: function(n, kind){ return n + ' 담당자 <b style="font-weight:900; color:#e53935;">' + ({home:'홈페이지', blog:'네이버 블로그', place:'네이버플레이스'}[kind] || '') + '</b> 바로가기'; },
       areaLabelPrefix: '',
       areaLabelSuffix: ' 담당자에게 문자 문의',
@@ -754,6 +768,7 @@ document.addEventListener('selectstart', function(e){
       selectAreaFirst: '먼저 위 목록에서 지역을 선택해 주세요.'
     },
     en: {
+      callTitle: 'Call Consultation', callMsg: function(n){ return 'You will be connected to the ' + n + ' representative.'; }, callCancel: 'Cancel', callOk: 'OK, Call',
       placeBtn: function(n, kind){ return n + ' Representative – <b style="font-weight:900; color:#e53935;">' + ({home:'Website', blog:'Naver Blog', place:'Naver Place'}[kind] || '') + '</b>'; },
       areaLabelPrefix: 'Text ',
       areaLabelSuffix: ' Representative',
@@ -774,6 +789,7 @@ document.addEventListener('selectstart', function(e){
       selectAreaFirst: 'Please select a region from the list above first.'
     },
     'zh-CN': {
+      callTitle: '电话咨询', callMsg: function(n){ return '将为您接通' + n + '负责人的电话。'; }, callCancel: '取消', callOk: '确认，拨打电话',
       placeBtn: function(n, kind){ return n + ' 负责人 <b style="font-weight:900; color:#e53935;">' + ({home:'官网', blog:'Naver Blog', place:'Naver Place'}[kind] || '') + '</b>'; },
       areaLabelPrefix: '向',
       areaLabelSuffix: '负责人发送短信',
@@ -794,6 +810,7 @@ document.addEventListener('selectstart', function(e){
       selectAreaFirst: '请先在上方列表中选择地区。'
     },
     'zh-TW': {
+      callTitle: '電話諮詢', callMsg: function(n){ return '將為您接通' + n + '負責人的電話。'; }, callCancel: '取消', callOk: '確認，撥打電話',
       placeBtn: function(n, kind){ return n + ' 負責人 <b style="font-weight:900; color:#e53935;">' + ({home:'官網', blog:'Naver Blog', place:'Naver Place'}[kind] || '') + '</b>'; },
       areaLabelPrefix: '向',
       areaLabelSuffix: '負責人傳送簡訊',
@@ -979,7 +996,24 @@ document.addEventListener('selectstart', function(e){
       alert(t().selectAreaFirst);
       return;
     }
-    location.href = 'tel:' + inqAreaTel;
+    var digits = String(inqAreaTel).replace(/[^0-9]/g, '');
+    var shown = digits.length === 11 ? digits.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3') : (digits.length === 10 ? digits.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3') : inqAreaTel);
+    var nm = (inqAreaName || inqAreaNameKo || '').replace(/\s*[(（].*?[)）]\s*/g, '');
+    document.getElementById('inqCallTitle').textContent = t().callTitle;
+    document.getElementById('inqCallMsg').textContent = t().callMsg(nm);
+    document.getElementById('inqCallNum').textContent = shown;
+    document.getElementById('inqCallCancel').textContent = t().callCancel;
+    document.getElementById('inqCallOk').textContent = t().callOk;
+    var ov = document.getElementById('inqCallOverlay');
+    if(ov) ov.style.display = 'flex';
+  };
+  window.inqCloseCall = function(){
+    var ov = document.getElementById('inqCallOverlay');
+    if(ov) ov.style.display = 'none';
+  };
+  window.inqConfirmCall = function(){
+    window.inqCloseCall();
+    if(inqAreaTel) location.href = 'tel:' + inqAreaTel;
   };
 
   function initInqPlaceholders(){
