@@ -106,7 +106,7 @@
   .area-chip.is-open{border-color:#1a73e8; box-shadow:0 0 0 2px rgba(26,115,232,.25);}
   #inqToggleBtn{display:none !important;}
   .inq-btn-place{display:flex; align-items:center; justify-content:center; width:100%; min-height:52px; margin-top:10px; padding:10px 12px; border-radius:8px; background:#DCF7E6; border:1.5px solid #03C75A; color:#1558c9; font-size:19px; font-weight:600; box-shadow:0 3px 8px rgba(0,0,0,.18); line-height:1.35; text-align:center; word-break:keep-all;}
-  .inq-btn-place .place-area{font-size:21px; color:#1558c9; font-weight:800;}
+  .inq-btn-place .place-area{font-size:21px; color:#e53935; font-weight:800;}
   html[lang="zh-Hans"] *, html[lang="zh-Hant"] *{word-break:normal !important; overflow-wrap:anywhere;}
   #inqGuideOverlay > div{box-sizing:border-box; max-width:400px !important; min-width:0;}
   #inqGuideOverlay button{min-width:0; padding:0 6px;}
@@ -841,7 +841,7 @@ document.addEventListener('selectstart', function(e){
     var sub = document.getElementById('inqAreaSub');
     if(label){
       if(inqAreaNameKo){
-        label.innerHTML = '<span style="color:#1a73e8;">' + (t().areaLabelPrefix || '') + '</span><span style="color:#1a73e8;">' + inqAreaName + '</span><span class="inq-area-label-sub" style="color:#1a73e8;">' + (t().areaLabelSuffix || '') + '</span>';
+        label.innerHTML = '<span style="color:#1a73e8;">' + (t().areaLabelPrefix || '') + '</span><span style="color:#e53935;">' + inqAreaName + '</span><span class="inq-area-label-sub" style="color:#1a73e8;">' + (t().areaLabelSuffix || '') + '</span>';
       } else {
         label.textContent = t().areaLabelDefault;
       }
