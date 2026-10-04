@@ -72,6 +72,11 @@
 
   /* quick inquiry (간편문의) */
   .inq-toggle-btn{width:100%; height:56px; border:2px solid var(--hazard); border-radius:12px; background:var(--glass-tint); color:var(--glass-deep); font-size:17px; font-weight:700; display:flex; align-items:center; justify-content:center; gap:8px; cursor:pointer; margin-top:24px; scroll-margin-top:90px;}
+  .area-chip{scroll-margin-top:90px;}
+  .area-chip.is-open{border-color:#1a73e8; box-shadow:0 0 0 2px rgba(26,115,232,.25);}
+  #inqToggleBtn{display:none !important;}
+  .inq-btn-place{display:flex; align-items:center; justify-content:center; width:100%; min-height:52px; margin-top:10px; padding:10px 12px; border-radius:8px; background:#DCF7E6; border:1.5px solid #03C75A; color:#1558c9; font-size:19px; font-weight:600; box-shadow:0 3px 8px rgba(0,0,0,.18); line-height:1.35; text-align:center; word-break:keep-all;}
+  .inq-btn-place .place-area{font-size:21px; color:#1558c9; font-weight:800;}
   .inq-form-card{background:var(--white); border:0.8px solid #000; border-radius:16px; padding:24px 20px; box-shadow:0 4px 16px rgba(20,24,28,.08); margin-top:16px;}
   .inq-form-card label{display:block; font-size:17px; font-weight:600; color:var(--ink); margin:16px 0 7px;}
   .inq-form-card select, .inq-form-card textarea{width:100%; border:1px solid var(--line); border-radius:8px; padding:13px; font-size:17px; font-weight:700; font-family:inherit; color:var(--ink); background:var(--white);}
@@ -501,29 +506,29 @@
       <p style="color:var(--steel); font-size:17px; margin-top:10px;">교체가 필요할지 수리가 가능할지 가장 합리적인 방법을 안내합니다.</p>
     </div>
     <div class="area-chips">
-      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('서울','01063505538');return false;"><span>서울</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('안양 군포','01063505538');return false;"><span>안양 군포</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('광명 시흥','01063505538');return false;"><span>광명 시흥</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('고양','01063505538');return false;"><span>고양</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('일산 파주','010-4904-4241');return false;"><span>일산 파주</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('김포 의정부','010-4904-4241');return false;"><span>김포 의정부</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('목감 매송','01063505538');return false;"><span>목감 매송</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('팔탄 향남','01063505538');return false;"><span>팔탄 향남</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('부천','01063505538');return false;"><span>부천</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('용인 성남','010-2265-8840');return false;"><span>용인 성남</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('과천','01063505538');return false;"><span>과천</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('동탄 수원','010-2265-8840');return false;"><span>동탄 수원</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('인천(복원,교환 가능)','010-5656-1362');return false;"><span>인천(복원,교환 가능)</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('대전 세종','010-4753-0935');return false;"><span>대전 세종</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('대구 경북','010-3509-4972');return false;"><span>대구 경북</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('부산 경남','010-8534-9934');return false;"><span>부산 경남</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('전남 광주','010-6590-2747');return false;"><span>전남 광주</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('원주 강원','010-8489-9909');return false;"><span>원주 강원</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('충남 충북','010-4753-0935');return false;"><span>충남 충북</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('전남 전북','010-2754-0138');return false;"><span>전남 전북</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('거제','010-2560-5721');return false;"><span>거제</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('평택 동탄','010-2437-4124');return false;"><span>평택 동탄</span><span class="area-chip-cta">문자 문의</span></a>
-      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('진천','010-8846-1100');return false;"><span>진천</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('서울','01063505538',this);return false;"><span>서울</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('안양 군포','01063505538',this);return false;"><span>안양 군포</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('광명 시흥','01063505538',this);return false;"><span>광명 시흥</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('고양','01063505538',this);return false;"><span>고양</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('일산 파주','010-4904-4241',this);return false;"><span>일산 파주</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('김포 의정부','010-4904-4241',this);return false;"><span>김포 의정부</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('목감 매송','01063505538',this);return false;"><span>목감 매송</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('팔탄 향남','01063505538',this);return false;"><span>팔탄 향남</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('부천','01063505538',this);return false;"><span>부천</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('용인 성남','010-2265-8840',this);return false;"><span>용인 성남</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('과천','01063505538',this);return false;"><span>과천</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('동탄 수원','010-2265-8840',this);return false;"><span>동탄 수원</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('인천(복원,교환 가능)','010-5656-1362',this);return false;"><span>인천(복원,교환 가능)</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('대전 세종','010-4753-0935',this);return false;"><span>대전 세종</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('대구 경북','010-3509-4972',this);return false;"><span>대구 경북</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('부산 경남','010-8534-9934',this);return false;"><span>부산 경남</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('전남 광주','010-6590-2747',this);return false;"><span>전남 광주</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('원주 강원','010-8489-9909',this);return false;"><span>원주 강원</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('충남 충북','010-4753-0935',this);return false;"><span>충남 충북</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('전남 전북','010-2754-0138',this);return false;"><span>전남 전북</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('거제','010-2560-5721',this);return false;"><span>거제</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-b" href="javascript:void(0)" onclick="openAreaInquiry('평택 동탄','010-2437-4124',this);return false;"><span>평택 동탄</span><span class="area-chip-cta">문자 문의</span></a>
+      <a class="area-chip area-chip-a" href="javascript:void(0)" onclick="openAreaInquiry('진천','010-8846-1100',this);return false;"><span>진천</span><span class="area-chip-cta">문자 문의</span></a>
     </div>
 
     <button type="button" class="inq-toggle-btn" id="inqToggleBtn" onclick="inqToggleForm()">
@@ -572,6 +577,7 @@
           <a href="javascript:void(0)" class="inq-btn-call" onclick="inqCallArea();return false;">전화 상담</a>
           <button type="button" class="inq-btn-send" onclick="inqTrySendSMS()">문자로 보내기</button>
         </div>
+        <a class="inq-btn-place" id="inqPlaceBtn" href="#" target="_blank" rel="noopener" style="display:none;"></a>
         <p class="inq-note">문자 메시지 창이 열리면 문의 내용을 붙여넣기 해주세요. (내용이 자동으로 복사됩니다) 손상 부위 사진도 함께 보내주시면 더 정확한 안내가 가능합니다.</p>
       </div>
     </div>
@@ -730,6 +736,7 @@ document.addEventListener('selectstart', function(e){
 
   var I18N = {
     ko: {
+      placeBtn: function(n, kind){ return n + ' 담당자 <b style="font-weight:900; color:#e53935;">' + ({home:'홈페이지', blog:'네이버 블로그', place:'네이버플레이스'}[kind] || '') + '</b> 바로가기'; },
       areaLabelPrefix: '',
       areaLabelSuffix: ' 담당자에게 문자 문의',
       areaSub: function(name){ return '아래 내용을 남기고 [문자로 보내기]를 누르면 ' + name + ' 담당자에게 문자가 전송됩니다.'; },
@@ -749,6 +756,7 @@ document.addEventListener('selectstart', function(e){
       selectAreaFirst: '먼저 위 목록에서 지역을 선택해 주세요.'
     },
     en: {
+      placeBtn: function(n, kind){ return n + ' Representative – <b style="font-weight:900; color:#e53935;">' + ({home:'Website', blog:'Naver Blog', place:'Naver Place'}[kind] || '') + '</b>'; },
       areaLabelPrefix: 'Text ',
       areaLabelSuffix: ' Representative',
       areaSub: function(name){ return 'Fill in the details and tap [Send by Text] to send a message to the ' + name + ' representative.'; },
@@ -768,6 +776,7 @@ document.addEventListener('selectstart', function(e){
       selectAreaFirst: 'Please select a region from the list above first.'
     },
     'zh-CN': {
+      placeBtn: function(n, kind){ return n + ' 负责人 <b style="font-weight:900; color:#e53935;">' + ({home:'官网', blog:'Naver Blog', place:'Naver Place'}[kind] || '') + '</b>'; },
       areaLabelPrefix: '向',
       areaLabelSuffix: '负责人发送短信',
       areaSub: function(name){ return '填写下方内容后点击[发送短信]，即可将短信发送给' + name + '负责人。'; },
@@ -787,6 +796,7 @@ document.addEventListener('selectstart', function(e){
       selectAreaFirst: '请先在上方列表中选择地区。'
     },
     'zh-TW': {
+      placeBtn: function(n, kind){ return n + ' 負責人 <b style="font-weight:900; color:#e53935;">' + ({home:'官網', blog:'Naver Blog', place:'Naver Place'}[kind] || '') + '</b>'; },
       areaLabelPrefix: '向',
       areaLabelSuffix: '負責人傳送簡訊',
       areaSub: function(name){ return '填寫下方內容後點選[傳送簡訊]，即可將簡訊傳送給' + name + '負責人。'; },
@@ -807,6 +817,20 @@ document.addEventListener('selectstart', function(e){
     }
   };
   function t(){ return I18N[curLang()] || I18N.ko; }
+  var AREA_PLACE = {
+    '서울': 'https://www.car700.co.kr',
+    '대전 세종': 'https://chungcheong-glass.vercel.app',
+    '충남 충북': 'https://chungcheong-glass.vercel.app',
+    '용인 성남': 'https://m.place.naver.com/place/1812417055',
+    '동탄 수원': 'https://m.blog.naver.com/stara4',
+    '거제': 'https://m.place.naver.com/place/1605180033',
+    '인천(복원,교환 가능)': 'https://m.blog.naver.com/6283274',
+    '일산 파주': 'https://m.blog.naver.com/ilsancarglass',
+    '김포 의정부': 'https://m.blog.naver.com/ilsancarglass',
+    '평택 동탄': 'https://m.place.naver.com/place/1295918793',
+    '부산 경남': 'https://m.place.naver.com/place/1792705358',
+    '원주 강원': 'https://m.place.naver.com/place/36605162'
+  };
 
   window.__inqRefreshLang = function(){
     if(inqAreaNameKo){ var D = window.__siteDicts && window.__siteDicts[curLang()]; inqAreaName = (D && D[inqAreaNameKo]) ? D[inqAreaNameKo] : inqAreaNameKo; }
@@ -826,6 +850,12 @@ document.addEventListener('selectstart', function(e){
       var span = btn.querySelector('span');
       if(span) span.textContent = (box.style.display === 'block') ? t().toggleClose : t().toggleOpen;
     }
+    var pb = document.getElementById('inqPlaceBtn');
+    if(pb){
+      var purl = inqAreaNameKo ? AREA_PLACE[inqAreaNameKo] : '';
+      if(purl){ pb.href = purl; pb.innerHTML = '<span>' + t().placeBtn('<span class="place-area">' + inqAreaName.replace(/\s*[(（].*?[)）]\s*/g, '') + '</span>', (purl.indexOf('blog.naver.com') >= 0 ? 'blog' : (purl.indexOf('naver.com') >= 0 ? 'place' : 'home'))) + '</span>'; pb.style.display = 'flex'; }
+      else { pb.style.display = 'none'; pb.removeAttribute('href'); }
+    }
     var msgEl = document.getElementById('inqMsg');
     if(msgEl){
       var ph = t().msgPlaceholder;
@@ -834,28 +864,41 @@ document.addEventListener('selectstart', function(e){
     }
   };
 
-  window.openAreaInquiry = function(name, tel){
+  var inqOpenChip = null;
+  function inqCloseForm(){
+    var box = document.getElementById('inqCollapse');
+    if(box) box.style.display = 'none';
+    if(inqOpenChip) inqOpenChip.classList.remove('is-open');
+    inqOpenChip = null;
+  }
+  window.openAreaInquiry = function(name, tel, chip){
+    var box = document.getElementById('inqCollapse');
+    if(!box) return;
+    /* 같은 지역 버튼을 다시 누르면 닫기 */
+    if(chip && chip === inqOpenChip && box.style.display === 'block'){
+      inqCloseForm();
+      return;
+    }
+    if(inqOpenChip) inqOpenChip.classList.remove('is-open');
     inqAreaNameKo = name;
     inqAreaTel = tel;
     inqAreaName = (window.__siteDicts && window.__siteDicts[curLang()] && window.__siteDicts[curLang()][name]) ? window.__siteDicts[curLang()][name] : name;
-    window.__inqRefreshLang();
-    var box = document.getElementById('inqCollapse');
-    if(box && box.style.display !== 'block'){
-      box.style.display = 'block';
-      window.__inqRefreshLang();
+    /* 폼을 누른 지역 버튼 바로 아래로 이동 */
+    if(chip){
+      chip.insertAdjacentElement('afterend', box);
+      chip.classList.add('is-open');
+      inqOpenChip = chip;
     }
+    box.style.display = 'block';
+    window.__inqRefreshLang();
     setTimeout(function(){
-      var target = document.getElementById('inqToggleBtn');
-      if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+      var target = chip || box;
+      target.scrollIntoView({behavior:'smooth', block:'start'});
     }, 50);
   };
 
   window.inqToggleForm = function(){
-    var box = document.getElementById('inqCollapse');
-    if(!box) return;
-    var isOpen = box.style.display === 'block';
-    if(!isOpen) return; /* 닫혀있을 때는 펼쳐지지 않음 - 지역 버튼으로만 열림 */
-    box.style.display = 'none';
+    inqCloseForm();
     window.__inqRefreshLang();
   };
 
