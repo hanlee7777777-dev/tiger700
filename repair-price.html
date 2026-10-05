@@ -828,7 +828,7 @@ document.addEventListener('selectstart', function(e){
         label.textContent = t().areaLabelDefault;
       }
     }
-    if(sub){ if(inqAreaNameKo){ sub.innerHTML = t().areaSub('<span style="color:#e53935;">' + inqAreaName + '</span>'); } else { sub.textContent = t().areaSubDefault; } }
+    if(sub){ if(inqAreaNameKo){ sub.innerHTML = t().areaSub('<span style="color:#e53935; font-weight:800;">' + inqAreaName + '</span>'); } else { sub.textContent = t().areaSubDefault; } }
     var box = document.getElementById('inqCollapse');
     var btn = document.getElementById('inqToggleBtn');
     if(btn && box){
