@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
 
   const kst = new Date(Date.now() + 9*60*60*1000).toISOString().slice(0, 10);
   const key = 'tg:pv:' + kst;     // 실제 페이지뷰 (새로고침 포함 전부)
-  const snap = 'tg:snap:' + kst;  // 화면 표시용 숫자 (5분마다 갱신)
+  const snap = 'tg:snap:' + kst;  // 화면 표시용 숫자 (3분마다 갱신)
   const hit = /(?:^|[?&])hit=1(?:&|$)/.test(req.url || '');
   const base = url.replace(/\/$/, '') + '/pipeline';
   const call = async (cmds) => {
@@ -25,7 +25,7 @@ module.exports = async (req, res) => {
     if (shown !== null && shown !== undefined) {
       today = parseInt(shown, 10) || 0;
     } else {
-      await call([['SET', snap, String(total), 'NX', 'EX', '300']]);
+      await call([['SET', snap, String(total), 'NX', 'EX', '180']]);
       today = total;
     }
     res.end(JSON.stringify({ today: today }));
