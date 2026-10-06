@@ -1,5 +1,3 @@
-const crypto = require('crypto');
-
 module.exports = async (req, res) => {
   res.setHeader('Cache-Control', 'no-store');
   res.setHeader('Content-Type', 'application/json');
@@ -8,7 +6,8 @@ module.exports = async (req, res) => {
   if (!url || !token) { res.statusCode = 503; return res.end(JSON.stringify({ error: 'storage not connected' })); }
 
   const kst = new Date(Date.now() + 9*60*60*1000).toISOString().slice(0, 10);
-  const key = 'tg:pv:' + kst;
+  const key = 'tg:pv:' + kst;     // 실제 페이지뷰 (새로고침 포함 전부)
+  const snap = 'tg:snap:' + kst;  // 화면 표시용 숫자 (5분마다 갱신)
   const hit = /(?:^|[?&])hit=1(?:&|$)/.test(req.url || '');
   const base = url.replace(/\/$/, '') + '/pipeline';
   const call = async (cmds) => {
@@ -17,19 +16,18 @@ module.exports = async (req, res) => {
   };
 
   try {
-    let d;
-    if (hit) {
-      // 같은 방문자(IP+브라우저)는 10분에 1번만 카운트
-      const ip = String(req.headers['x-forwarded-for'] || (req.socket && req.socket.remoteAddress) || '').split(',')[0].trim();
-      const ua = String(req.headers['user-agent'] || '');
-      const id = crypto.createHash('sha256').update(ip + '|' + ua).digest('hex').slice(0, 24);
-      const first = await call([['SET', 'tg:seen:' + id, '1', 'NX', 'EX', '600']]);
-      d = (first[0] && first[0].result === 'OK')
-        ? await call([['INCR', key], ['EXPIRE', key, '172800']])
-        : await call([['GET', key]]);
+    const d = await call(hit
+      ? [['INCR', key], ['EXPIRE', key, '172800'], ['GET', snap]]
+      : [['GET', key], ['GET', snap]]);
+    const total = parseInt(d[0] && d[0].result, 10) || 0;
+    const shown = d[hit ? 2 : 1] && d[hit ? 2 : 1].result;
+    let today;
+    if (shown !== null && shown !== undefined) {
+      today = parseInt(shown, 10) || 0;
     } else {
-      d = await call([['GET', key]]);
+      await call([['SET', snap, String(total), 'NX', 'EX', '300']]);
+      today = total;
     }
-    res.end(JSON.stringify({ today: parseInt(d[0] && d[0].result, 10) || 0 }));
+    res.end(JSON.stringify({ today: today }));
   } catch (e) { res.statusCode = 500; res.end(JSON.stringify({ error: 'counter failed' })); }
 };
