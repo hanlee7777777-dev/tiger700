@@ -158,6 +158,9 @@
   footer{background:var(--paper); border-top:1px solid var(--line); padding:36px 0; font-size:13px; color:var(--steel);}
   footer .biz-info{margin-bottom:14px; line-height:1.9;}
   footer .wrap-inner{text-align:center;}
+  .area-jump{display:inline-flex; align-items:center; gap:6px; margin:18px 0 22px; padding:11px 18px; border:1.5px solid #FFE135; border-radius:999px; color:#FFE135; font-size:16px; font-weight:700; text-decoration:none; background:rgba(0,0,0,.25);}
+  .area-jump::after{content:'→';}
+  .area-jump:active{background:#FFE135; color:#14181C;}
 </style>
 
 <style>
@@ -353,6 +356,7 @@
       <div class="stat"><b id="statCounter" style="font-size:28px; font-variant-numeric:tabular-nums; display:inline-block; text-align:right;"><span id="statNum">50,000</span><span id="statPlus" style="display:inline-block;">+</span></b>누적 수리 시공</div>
       <div class="stat"><b>당일</b>상담· 출장 시공가능</div>
     </div>
+    <a href="#service-area" class="area-jump">전국 서비스 지역 안내</a>
   </div>
 </section>
 
