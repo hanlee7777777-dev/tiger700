@@ -153,6 +153,10 @@
   .case-lb img{display:block; width:100%; max-width:900px; height:auto; border-radius:6px; cursor:zoom-in;}
   .case-lb.zoom .case-lb-in{display:block; padding:64px 0 24px;}
   .case-lb.zoom img{width:220%; max-width:none; cursor:zoom-out; border-radius:0;}
+  .case-lb-nav{position:fixed; top:50%; transform:translateY(-50%); z-index:2; width:44px; height:64px; border:none; border-radius:8px; background:rgba(255,255,255,.85); color:#14181C; font-size:40px; line-height:60px; cursor:pointer; padding:0;}
+  .case-lb-prev{left:6px;} .case-lb-next{right:6px;}
+  .case-lb.zoom .case-lb-nav{display:none;}
+  .case-lb-num{position:fixed; top:22px; left:0; right:0; text-align:center; color:#fff; font-size:15px; font-weight:700; pointer-events:none;}
   .case-lb-tip{position:fixed; left:0; right:0; bottom:14px; text-align:center; color:#fff; font-size:14px; opacity:.75; pointer-events:none;}
   .case-lb-x{position:fixed; z-index:2; top:12px; right:12px; width:44px; height:44px; border:none; border-radius:50%; background:rgba(255,255,255,.9); color:#14181C; font-size:26px; line-height:44px; cursor:pointer;}
 </style>
@@ -1066,16 +1070,20 @@ document.addEventListener('selectstart', function(e){
     .catch(function(){});
 })();
 </script>
-<div class="case-lb" id="caseLb" onclick="if(event.target.tagName!=='IMG')closeCaseLb()"><button type="button" class="case-lb-x" aria-label="닫기">&times;</button><div class="case-lb-in"><img alt=""></div><div class="case-lb-tip">사진을 누르면 더 크게 볼 수 있어요</div></div>
+<div class="case-lb" id="caseLb" onclick="if(event.target===this||event.target.classList.contains('case-lb-in'))closeCaseLb()"><button type="button" class="case-lb-x" aria-label="닫기" onclick="closeCaseLb()">&times;</button><button type="button" class="case-lb-nav case-lb-prev" aria-label="이전" onclick="caseLbGo(-1)">&#8249;</button><button type="button" class="case-lb-nav case-lb-next" aria-label="다음" onclick="caseLbGo(1)">&#8250;</button><div class="case-lb-num"></div><div class="case-lb-in"><img alt=""></div><div class="case-lb-tip">사진을 누르면 더 크게 볼 수 있어요</div></div>
 <script>
 (function(){
-  var lb=document.getElementById('caseLb'), im=lb.querySelector('img');
-  im.addEventListener('click',function(){ lb.classList.toggle('zoom'); if(lb.classList.contains('zoom')){ var w=lb.scrollWidth-lb.clientWidth; lb.scrollLeft=w/2; } });
+  var lb=document.getElementById('caseLb'), im=lb.querySelector('img'), num=lb.querySelector('.case-lb-num');
+  var list=[].slice.call(document.querySelectorAll('.case-list img')), cur=0;
+  function show(i){ cur=(i+list.length)%list.length; var t=list[cur]; im.src=t.currentSrc||t.src; im.alt=t.alt; num.textContent=(cur+1)+' / '+list.length; lb.classList.remove('zoom'); lb.scrollTop=0; lb.scrollLeft=0; }
+  window.caseLbGo=function(d){ show(cur+d); };
   window.closeCaseLb=function(){ lb.classList.remove('open','zoom'); document.body.style.overflow=''; };
-  document.querySelectorAll('.case-list img').forEach(function(img){
-    img.addEventListener('click',function(){ im.src=img.currentSrc||img.src; im.alt=img.alt; lb.classList.add('open'); document.body.style.overflow='hidden'; });
-  });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeCaseLb(); });
+  list.forEach(function(img,i){ img.addEventListener('click',function(){ show(i); lb.classList.add('open'); document.body.style.overflow='hidden'; }); });
+  im.addEventListener('click',function(){ lb.classList.toggle('zoom'); if(lb.classList.contains('zoom')){ lb.scrollLeft=(lb.scrollWidth-lb.clientWidth)/2; } });
+  var sx=0, sy=0;
+  lb.addEventListener('touchstart',function(e){ sx=e.touches[0].clientX; sy=e.touches[0].clientY; },{passive:true});
+  lb.addEventListener('touchend',function(e){ if(lb.classList.contains('zoom')) return; var dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy; if(Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)) show(cur+(dx<0?1:-1)); },{passive:true});
+  document.addEventListener('keydown',function(e){ if(!lb.classList.contains('open')) return; if(e.key==='Escape') closeCaseLb(); if(e.key==='ArrowRight') show(cur+1); if(e.key==='ArrowLeft') show(cur-1); });
 })();
 </script>
 </body>
