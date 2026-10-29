@@ -1,4 +1,26 @@
 User-agent: *
 Allow: /
 
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing (ChatGPT 검색이 Bing 색인을 함께 사용)
+User-agent: Bingbot
+Allow: /
+
+# ChatGPT 검색 / OpenAI
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# 네이버
+User-agent: Yeti
+Allow: /
+
 Sitemap: https://topglass911.com/sitemap.xml
